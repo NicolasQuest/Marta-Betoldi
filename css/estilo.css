@@ -313,6 +313,13 @@ video{
     
     
 }
+
+.cajaContenedora1 img {
+   
+    height: 55vh;
+    width: 60vw;
+    margin-bottom: 4vh;
+}
 }
 
 
