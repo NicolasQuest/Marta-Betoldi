@@ -1,0 +1,318 @@
+/*  */
+
+@font-face {
+    font-family: helvetica-th;
+    src: url(../font/HelveticaNeueLTStd-Th.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+
+}
+
+.elBody {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    background-color: rgb(255, 255, 255);
+    /*  rgb(223, 212, 212); */
+
+}
+
+h1 {
+    font-family: helvetica-th;
+    text-align: left;
+    font-weight: lighter;
+    font-size: 2.8rem;
+}
+
+h2 {
+    font-family: helvetica-th;
+    text-align: left;
+    font-weight: lighter;
+    font-size: 2rem;
+}
+h3 {
+    font-family: helvetica-th;
+    text-align: left;
+    font-weight: lighter;
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 1vh;
+}
+
+p {
+    font-family: helvetica-th;
+    font-weight: 100;
+    font-size: 1.7rem;
+}
+
+
+
+/* NAV */
+header {
+    display: flex;
+    margin: 4vh 20vw;
+    justify-content: space-between;
+    border-bottom: 1px rgb(34, 33, 33) solid;
+}
+
+
+.menuNav a {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+}
+
+.menuNav a:hover {
+    color: #000000;
+}
+
+.textoLinks {
+    text-align: center;
+}
+
+/* HEADER */
+
+
+.vsc-controller{
+    display: none !important;
+    opacity: 0.0 !important;
+
+}
+
+
+li a {
+    font-family: helvetica-th;
+    text-size-adjust: 2rem;
+}
+
+/* Main menu */
+
+
+
+/* Footer */
+footer {
+
+    margin-top: 20vh;
+    border-top: 1px #b1b0b0 solid;
+    text-align: center;
+    padding-top: 60px;
+}
+
+
+.footerTexto{
+    font-size: 1rem;
+}
+
+footer .iconos {
+    display: flex;
+    justify-content: center;
+}
+
+footer .iconos a {
+    text-decoration: none;
+    padding: 0px 15px;
+    margin: 0px 0px 0px 20px;
+    border-radius: 50px;
+    color: rgb(6, 6, 6);
+    font-size: 30px;
+}
+
+footer .footerBottom {
+    margin: 30px 0px 20px 10px;
+}
+
+
+
+/* BIO */
+
+
+.cajaContenedora1 {
+    display: flex;
+    margin: 0vh 20vw;
+    border-bottom: black solid 1px;
+}
+
+.textoBio {
+    font-size: 1.9rem;
+}
+
+#tituloBio {
+    font-size: 2.6rem;
+
+}
+
+.cajaItemTres {
+    padding-left: 14vh;
+    text-align: left;
+    padding-top: 1vh;
+}
+
+.cajaContenedora1 img {
+    border-radius: 10px;
+    object-fit: cover;
+    height: 55vh;
+    width: 19vw;
+    margin-bottom: 4vh;
+    filter: brightness(90%);
+}
+
+.cajaContenedora1 img:hover {
+    filter: brightness(100%);
+    cursor: pointer;
+   
+}
+
+.cajaContenedora2 {
+    display: flex;
+    margin: 2vh 20vw;
+}
+
+.portfolio {
+    display: flex inline-block;
+}
+
+.titulosPortfolio {
+    padding: 2vh 0vw;
+    font-size: 2.1rem;
+
+}
+
+.textoSecundario {
+    font-size: 1.6rem;
+}
+
+.titulosPortfolio2 {
+    padding: 2vh 0vw;
+}
+
+.textoIncio h2 {
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    align-self: center;
+    justify-self: center;
+}
+
+/* Proyectos */
+
+.textoAltura {
+    height: 140px;
+}
+
+.tituloProyectos {
+    /* text-align: center; */
+    margin: 1vh 20vw 0vh 20vw;
+    font-weight: bold;
+
+}
+.premios {
+    text-align: center;
+    margin: 1vh 20vw 0vh 20vw;
+    font-weight: bold;
+}
+
+.video {
+    height: 50.5vh;
+    object-fit: cover;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;}
+  
+.minutos {
+    justify-self: right;
+    align-self: right;
+}
+
+
+.player iframe {
+    border-radius: 10px;
+}
+
+.player:hover {
+    transform: scale(1.01, 1.01);
+}
+
+
+.mapa{
+    height: 40vh;
+    width: 40vw;
+    
+
+}
+
+.titulosContacto {
+    padding: 0vh 0vw;
+    font-size: 2.1rem;
+    text-align: center;
+
+}
+.cajaContenedora3 {
+    display: flex;
+    margin: 2vh 20vw;
+    justify-content: center;
+    text-align: center;
+}
+/* 
+   */
+
+
+video{
+    padding-top: 0vh;
+    width: 80vw;
+    height: 80vh;
+    object-fit: cover;
+    border-radius: 15px;
+    
+    
+}
+
+.fotoMain{
+    width: 36vw;
+    height: 40vh;
+    object-fit: cover;
+}
+
+.language{
+
+    text-decoration: none;
+    text-transform: none;
+    font-size: 2rem;
+    font-family: helvetica-th;
+
+}
+
+/* RESPONSIVES */
+
+@media (min-width: 0px) and (max-width: 1200px) {
+/* BIO */
+
+  .cajaContenedora1,
+  .cajaContenedora2 {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  
+  .cajaItemTres {
+    padding-left: 0vh;
+    padding-top: 5vh;
+  }
+video{
+    padding-top: 2vh;
+    width: 60vw;
+    height: 50vh;
+    object-fit: cover;
+    border-radius: 10px;
+    
+    
+}
+}
+
+
