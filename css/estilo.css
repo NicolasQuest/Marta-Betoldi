@@ -202,6 +202,36 @@ footer .footerBottom {
     justify-self: center;
 }
 
+.cartasLenguaje img {
+    border-radius: 10px;
+    margin-top: 2rem;
+    height: 8vh;
+    width:4vw;
+    /* object-fit: cover; */
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 4rem 4rem 4rem;
+    filter:brightness(80%);
+
+  }
+
+  .cartasLenguaje img:hover{
+    cursor: pointer;
+  filter:brightness(90%);
+  transform: scale(1.20,1.15);
+  }
+
+/* .cajaContenedora4 {
+    display: inline-flex;
+    margin: 2vh 20vw;
+}
+
+.cliente{
+    width: 10vw;
+    border-radius: 10px;
+    padding: 0vh 2vw 0vh 2vw;
+   
+} */
 /* Proyectos */
 
 .textoAltura {
@@ -312,13 +342,14 @@ video{
     border-radius: 10px;
     
     
+    
 }
 
 .cajaContenedora1 img {
    
     height: 55vh;
     width: 60vw;
-    margin-bottom: 4vh;
+    margin-bottom: 4vh; 
 }
 }
 
