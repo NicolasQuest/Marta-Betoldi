@@ -63,6 +63,7 @@ p {
 
 
 
+
 /* NAV */
 header {
     display: flex;
@@ -71,11 +72,14 @@ header {
     border-bottom: 1px rgb(34, 33, 33) solid;
 }
 
-
+.navbar-brand h1{
+    font-size: 2rem;
+}
 .menuNav a {
     text-transform: uppercase;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
 }
+
 
 .menuNav a:hover {
     color: #000000;
