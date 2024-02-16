@@ -38,6 +38,7 @@ h2 {
     font-weight: lighter;
     font-size: 2rem;
 }
+
 h3 {
     font-family: helvetica-th;
     text-align: left;
@@ -80,7 +81,7 @@ header {
 /* HEADER */
 
 
-.vsc-controller{
+.vsc-controller {
     display: none !important;
     opacity: 0.0 !important;
 
@@ -106,7 +107,7 @@ footer {
 }
 
 
-.footerTexto{
+.footerTexto {
     font-size: 0.5rem;
 }
 
@@ -166,7 +167,7 @@ footer .footerBottom {
 .cajaContenedora1 img:hover {
     filter: brightness(100%);
     cursor: pointer;
-   
+
 }
 
 .cajaContenedora2 {
@@ -203,26 +204,66 @@ footer .footerBottom {
 }
 
 /* Clientes */
-.cartasLenguaje img {
-    border-radius: 10px;
-    margin-top: 2rem;
-    height: 8vh;
-    width:6vw;
-    /* object-fit: cover; */
-    display: flex;
-    justify-content: space-between;
-    margin: 0px 4rem 4rem 4rem;
-    filter:brightness(80%);
 
+@keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
   }
-
-  .cartasLenguaje img:hover{
-    cursor: pointer;
-  filter:brightness(90%);
-  transform: scale(1.20,1.15);
+  
+  .logos {
+    overflow: hidden;
+    padding: 60px 0;
+    background: white;
+    white-space: nowrap;
+    position: relative;
   }
+  
+  .logos:before,
+  .logos:after {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+  }
+  
+  .logos:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+  }
+  
+  .logos:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+  }
+  
+  .logos:hover .logos-slide {
+    animation-play-state: paused;
+    
+  }
+  
+  .logos-slide {
+    display: inline-block;
+    animation: 35s slide infinite linear;
+  }
+  
+  .logos-slide img {
+    height: 50px;
+    margin: 0 40px;
+}
 
-  /*  */
+
+
+/* } */
+
+
+
+/*  */
 
 /* .cajaContenedora4 {
     display: inline-flex;
@@ -247,6 +288,7 @@ footer .footerBottom {
     font-weight: bold;
 
 }
+
 .premios {
     text-align: center;
     margin: 1vh 20vw 0vh 20vw;
@@ -257,8 +299,9 @@ footer .footerBottom {
     height: 50.5vh;
     object-fit: cover;
     border-top-right-radius: 8px;
-    border-top-left-radius: 8px;}
-  
+    border-top-left-radius: 8px;
+}
+
 .minutos {
     justify-self: right;
     align-self: right;
@@ -274,10 +317,10 @@ footer .footerBottom {
 }
 
 
-.mapa{
+.mapa {
     height: 40vh;
     width: 40vw;
-    
+
 
 }
 
@@ -287,6 +330,7 @@ footer .footerBottom {
     text-align: center;
 
 }
+
 .cajaContenedora3 {
     display: flex;
     margin: 2vh 20vw;
@@ -294,27 +338,32 @@ footer .footerBottom {
     text-align: center;
 }
 
-/* 
-   */
+.cajaContenedora4 {
+    display: flex;
+    margin: 2vh 20vw;
+
+}
 
 
-video{
+
+
+.cajaContenedora3 video {
     padding-top: 0vh;
-    width: 80vw;
+    width: 90vw;
     height: 80vh;
     object-fit: cover;
     border-radius: 15px;
-    
-    
+
+
 }
 
-.fotoMain{
+.fotoMain {
     width: 36vw;
     height: 40vh;
     object-fit: cover;
 }
 
-.language{
+.language {
 
     text-decoration: none;
     text-transform: none;
@@ -323,45 +372,56 @@ video{
 
 }
 
-.fotito{
+.fotito {
     width: 30vw;
     height: 30vh;
     object-fit: cover;
 }
+
 /* RESPONSIVES */
 
 @media (min-width: 0px) and (max-width: 1200px) {
-/* BIO */
+    /* BIO */
 
-  .cajaContenedora1,
-  .cajaContenedora2 {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-  
-  .cajaItemTres {
-    padding-left: 0vh;
-    padding-top: 5vh;
-  }
-video{
-    padding-top: 2vh;
-    width: 60vw;
-    height: 50vh;
-    object-fit: cover;
-    border-radius: 10px;
-    
-    
-    
+    .cajaContenedora1,
+    .cajaContenedora2 {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .cajaItemTres {
+        padding-left: 0vh;
+        padding-top: 5vh;
+    }
+
+    video {
+        padding-top: 2vh;
+        width: 60vw;
+        height: 50vh;
+        object-fit: cover;
+        border-radius: 10px;
+
+
+
+    }
+
+    .cajaContenedora1 img {
+
+        height: 55vh;
+        width: 60vw;
+        margin-bottom: 4vh;
+    }
 }
 
-.cajaContenedora1 img {
-   
-    height: 55vh;
-    width: 60vw;
-    margin-bottom: 4vh; 
-}
-}
+/* 
 
+@media (min-width:1501px) and (max-width: 1700px) {
+    .cartasLenguaje img {
+        height: 8vh;
+        width:6svw;
+        margin: 0px 2rem 0rem 2rem;
+      }
+    }
 @media (min-width: 768px) and (max-width: 1500px) {
 .cartasLenguaje img {
     height: 6vh;
@@ -379,9 +439,4 @@ video{
     .cartasLenguaje{
         margin-left:20vw ;
     }
-    }
-
-
-
-
-
+    } */
