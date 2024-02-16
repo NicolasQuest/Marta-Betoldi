@@ -107,7 +107,7 @@ footer {
 
 
 .footerTexto{
-    font-size: 1rem;
+    font-size: 0.5rem;
 }
 
 footer .iconos {
@@ -202,11 +202,12 @@ footer .footerBottom {
     justify-self: center;
 }
 
+/* Clientes */
 .cartasLenguaje img {
     border-radius: 10px;
     margin-top: 2rem;
     height: 8vh;
-    width:4vw;
+    width:6vw;
     /* object-fit: cover; */
     display: flex;
     justify-content: space-between;
@@ -220,6 +221,8 @@ footer .footerBottom {
   filter:brightness(90%);
   transform: scale(1.20,1.15);
   }
+
+  /*  */
 
 /* .cajaContenedora4 {
     display: inline-flex;
@@ -290,6 +293,7 @@ footer .footerBottom {
     justify-content: center;
     text-align: center;
 }
+
 /* 
    */
 
@@ -319,6 +323,11 @@ video{
 
 }
 
+.fotito{
+    width: 30vw;
+    height: 30vh;
+    object-fit: cover;
+}
 /* RESPONSIVES */
 
 @media (min-width: 0px) and (max-width: 1200px) {
@@ -352,5 +361,27 @@ video{
     margin-bottom: 4vh; 
 }
 }
+
+@media (min-width: 768px) and (max-width: 1500px) {
+.cartasLenguaje img {
+    height: 6vh;
+    width:6vw;
+    margin: 0px 2rem 0rem 2rem;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+    .cartasLenguaje img {
+        height: 12vh;
+        width:18vw;
+        margin: 0rem 0rem 2rem 0rem;
+      }
+    .cartasLenguaje{
+        margin-left:20vw ;
+    }
+    }
+
+
+
 
 
