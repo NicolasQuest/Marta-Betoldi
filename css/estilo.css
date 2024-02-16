@@ -54,6 +54,12 @@ p {
     font-size: 1rem;
 }
 
+.cita{
+    font-weight:lighter;
+    font-style: italic;
+    font-size: 1.8rem;
+}
+
 
 
 /* NAV */
@@ -141,11 +147,13 @@ footer .footerBottom {
 }
 
 .textoBio {
-    font-size: 1.9rem;
+    font-size: 1.4rem;
+    font-weight: 300;
 }
 
 #tituloBio {
-    font-size: 2.6rem;
+    font-size: 1.8rem;
+    font-weight: bold;
 
 }
 
@@ -158,8 +166,8 @@ footer .footerBottom {
 .cajaContenedora1 img {
     border-radius: 10px;
     object-fit: cover;
-    height: 55vh;
-    width: 19vw;
+    height: 45vh;
+    width: 18vw;
     margin-bottom: 4vh;
     filter: brightness(90%);
 }
@@ -180,13 +188,15 @@ footer .footerBottom {
 }
 
 .titulosPortfolio {
-    padding: 2vh 0vw;
-    font-size: 2.1rem;
+    padding: 1vh 0vw;
+    font-size: 1.6rem;
+    font-weight: bold;
 
 }
 
 .textoSecundario {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
+    font-weight: 200;
 }
 
 .titulosPortfolio2 {
@@ -326,8 +336,9 @@ footer .footerBottom {
 
 .titulosContacto {
     padding: 0vh 0vw;
-    font-size: 2.1rem;
+    font-size: 1.8rem;
     text-align: center;
+    font-weight: bolder;
 
 }
 
