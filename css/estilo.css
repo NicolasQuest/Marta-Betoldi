@@ -52,11 +52,11 @@ p {
     font-family: helvetica-th;
     font-weight: 100;
     font-size: 1.2rem;
-    
+
 }
 
-.cita{
-    font-weight:lighter;
+.cita {
+    font-weight: lighter;
     font-style: italic;
     margin-top: 4rem;
     font-size: 1.3rem;
@@ -75,9 +75,10 @@ header {
     border-bottom: 1px rgb(34, 33, 33) solid;
 }
 
-.navbar-brand h1{
+.navbar-brand h1 {
     font-size: 1.8rem;
 }
+
 .menuNav a {
     text-transform: uppercase;
     font-size: 1.2rem;
@@ -205,21 +206,24 @@ footer .footerBottom {
 
 
 }
+
 .textoSecundario2 {
     font-size: 1.2rem;
     font-weight: 200;
     font-family: helvetica-th;
-   
+
 }
+
 .textoSecundario {
     font-size: 1rem;
     font-weight: 200;
     font-family: helvetica-th;
     /* padding-bottom: 1rem; */
 }
+
 .tituloContacto {
     font-family: helvetica-th;
-    
+
 }
 
 .titulosPortfolio2 {
@@ -242,52 +246,53 @@ footer .footerBottom {
 
 @keyframes slide {
     from {
-      transform: translateX(0);
+        transform: translateX(0);
     }
+
     to {
-      transform: translateX(-100%);
+        transform: translateX(-100%);
     }
-  }
-  
-  .logos {
+}
+
+.logos {
     overflow: hidden;
     padding: 60px 0;
     background: white;
     white-space: nowrap;
     position: relative;
-  }
-  
-  .logos:before,
-  .logos:after {
+}
+
+.logos:before,
+.logos:after {
     position: absolute;
     top: 0;
     width: 250px;
     height: 100%;
     content: "";
     z-index: 2;
-  }
-  
-  .logos:before {
+}
+
+.logos:before {
     left: 0;
     background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
-  }
-  
-  .logos:after {
+}
+
+.logos:after {
     right: 0;
     background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
-  }
-  
-  .logos:hover .logos-slide {
+}
+
+.logos:hover .logos-slide {
     animation-play-state: paused;
-    
-  }
-  
-  .logos-slide {
+
+}
+
+.logos-slide {
     display: inline-block;
     animation: 35s slide infinite linear;
-  }
-  
-  .logos-slide img {
+}
+
+.logos-slide img {
     height: 50px;
     margin: 0 40px;
 }
@@ -324,7 +329,8 @@ footer .footerBottom {
     font-size: 1.8rem;
 
 }
-.tituloProyectos1{
+
+.tituloProyectos1 {
     /* text-align: center; */
     margin: 1vh 20vw 0vh 20vw;
     font-weight: bold;
@@ -419,7 +425,7 @@ footer .footerBottom {
 
 .fotito {
     height: 40vh;
-    width:45vw;
+    width: 45vw;
     object-fit: cover;
     margin-top: 2rem;
 }
@@ -459,30 +465,100 @@ footer .footerBottom {
     }
 
 
-.fotito{
-    height: 50vh;
-    width: 60vw;
-    object-fit:cover;
-    
+    .fotito {
+        height: 50vh;
+        width: 60vw;
+        object-fit: cover;
 
-}
+
+    }
 
 }
 
 @media (min-width: 0px) and (max-width: 600px) {
 
-    .fotito{
+    .fotito {
         height: 50vh;
         width: 60vw;
-        object-fit:scale-down   ;
-        
-    
+        object-fit: scale-down;
+
+
     }
+
     .logos {
         padding: 40px 0;
-        
-      }
-} 
+
+    }
+
+
+    h1 {
+        font-family: helvetica-th;
+        text-align: left;
+        font-weight: lighter;
+        font-size: 0.9rem;
+    }
+
+    h2 {
+
+        font-size: 0.7rem;
+    }
+
+    h3 {
+
+        font-size: 0.6rem;
+    }
+
+
+    p {
+
+        font-size: 0.8rem;
+
+    }
+
+    .cita {
+
+        font-size: 1rem;
+
+    }
+
+    .tituloProyectos {
+        font-size: 1.5rem;
+
+    }
+
+    .tituloProyectos1 {
+
+        font-size: 1.8rem;
+
+
+
+    }
+
+
+    .titulosPortfolio {
+
+        font-size: 1.4rem;
+
+
+
+    }
+
+    .textoSecundario2 {
+        font-size: 1rem;
+
+
+    }
+
+    .textoSecundario {
+        font-size: 0.8rem;
+
+
+    }
+}
+
+
+
+
 /* 
 
 
@@ -510,4 +586,4 @@ footer .footerBottom {
     .cartasLenguaje{
         margin-left:20vw ;
     }
-    } */
+    } 
