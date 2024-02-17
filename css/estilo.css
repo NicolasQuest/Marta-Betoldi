@@ -29,21 +29,21 @@ h1 {
     font-family: helvetica-th;
     text-align: left;
     font-weight: lighter;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
 }
 
 h2 {
     font-family: helvetica-th;
     text-align: left;
     font-weight: lighter;
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 h3 {
     font-family: helvetica-th;
     text-align: left;
     font-weight: lighter;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     text-align: center;
     padding: 1vh;
 }
@@ -51,14 +51,14 @@ h3 {
 p {
     font-family: helvetica-th;
     font-weight: 100;
-    font-size: 1rem;
+    font-size: 0.8rem;
     
 }
 
 .cita{
     font-weight:lighter;
     font-style: italic;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     text-align: center;
 }
 
@@ -74,7 +74,7 @@ header {
 }
 
 .navbar-brand h1{
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 .menuNav a {
     text-transform: uppercase;
@@ -102,7 +102,7 @@ header {
 
 li a {
     font-family: helvetica-th;
-    text-size-adjust: 2rem;
+    text-size-adjust: 1.8rem;
 }
 
 /* Main menu */
@@ -153,12 +153,12 @@ footer .footerBottom {
 }
 
 .textoBio {
-    font-size: 1.4rem;
+    font-size: 1rem;
     font-weight: 300;
 }
 
 #tituloBio {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     font-weight: bold;
 
 }
