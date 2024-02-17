@@ -52,6 +52,7 @@ p {
     font-family: helvetica-th;
     font-weight: 100;
     font-size: 1.2rem;
+    text-align: justify;
 
 }
 
@@ -159,6 +160,7 @@ footer .footerBottom {
     font-size: 1.1rem;
     font-weight: 300;
     font-family: helvetica-th;
+    text-align: justify;
 }
 
 #tituloBio {
@@ -211,6 +213,7 @@ footer .footerBottom {
     font-size: 1.2rem;
     font-weight: 200;
     font-family: helvetica-th;
+    text-align: center;
 
 }
 
@@ -218,6 +221,7 @@ footer .footerBottom {
     font-size: 1rem;
     font-weight: 200;
     font-family: helvetica-th;
+    text-align: justify;
     /* padding-bottom: 1rem; */
 }
 
@@ -233,12 +237,7 @@ footer .footerBottom {
 
 .textoIncio h2 {
     text-align: center;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    justify-items: center;
-    align-self: center;
-    justify-self: center;
+    
     font-family: helvetica-th;
 }
 
@@ -379,6 +378,7 @@ footer .footerBottom {
     font-size: 1.8rem;
     text-align: center;
     font-weight: bolder;
+    
 
 }
 
