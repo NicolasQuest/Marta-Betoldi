@@ -486,9 +486,12 @@ footer .footerBottom {
 @media (min-width: 0px) and (max-width: 600px) {
 
     .fotito {
-        height: 50vh;
+        height: 30vh;
         width: 60vw;
-        object-fit: scale-down;
+        object-fit:scale-down;
+        /* object-fit: scale-down; */
+        
+        object-position: top;
 
 
     }
@@ -497,6 +500,7 @@ footer .footerBottom {
         padding: 40px 0;
 
     }
+    
 
 
     h1 {
