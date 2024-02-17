@@ -59,6 +59,7 @@ p {
     font-weight:lighter;
     font-style: italic;
     font-size: 1.8rem;
+    text-align: center;
 }
 
 
@@ -390,8 +391,8 @@ footer .footerBottom {
 }
 
 .fotito {
-    width: 30vw;
-    height: 30vh;
+    height: 40vh;
+    width:45vw;
     object-fit: cover;
 }
 
@@ -428,9 +429,34 @@ footer .footerBottom {
         width: 60vw;
         margin-bottom: 4vh;
     }
+
+
+.fotito{
+    height: 50vh;
+    width: 60vw;
+    object-fit:cover;
+    
+
 }
 
+}
+
+@media (min-width: 0px) and (max-width: 600px) {
+
+    .fotito{
+        height: 50vh;
+        width: 60vw;
+        object-fit:scale-down   ;
+        
+    
+    }
+    .logos {
+        padding: 40px 0;
+        
+      }
+} 
 /* 
+
 
 @media (min-width:1501px) and (max-width: 1700px) {
     .cartasLenguaje img {
