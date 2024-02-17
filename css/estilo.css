@@ -51,15 +51,17 @@ h3 {
 p {
     font-family: helvetica-th;
     font-weight: 100;
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     
 }
 
 .cita{
     font-weight:lighter;
     font-style: italic;
-    font-size: 1.1rem;
+    margin-top: 4rem;
+    font-size: 1.3rem;
     text-align: center;
+    font-family: helvetica-th;
 }
 
 
@@ -153,18 +155,20 @@ footer .footerBottom {
 }
 
 .textoBio {
-    font-size: 1rem;
+    font-size: 1.4rem;
     font-weight: 300;
+    font-family: helvetica-th;
 }
 
 #tituloBio {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     font-weight: bold;
+    font-family: helvetica-th;
 
 }
 
 .cajaItemTres {
-    padding-left: 14vh;
+    padding-left: 4vh;
     text-align: left;
     padding-top: 1vh;
 }
@@ -172,8 +176,8 @@ footer .footerBottom {
 .cajaContenedora1 img {
     border-radius: 10px;
     object-fit: cover;
-    height: 45vh;
-    width: 18vw;
+    height: 34vh;
+    width: 28vw;
     margin-bottom: 4vh;
     filter: brightness(90%);
 }
@@ -194,19 +198,33 @@ footer .footerBottom {
 }
 
 .titulosPortfolio {
-    padding: 1vh 0vw;
+    padding: 2.8vh 0vw 0.8vh 0vw;
     font-size: 1.6rem;
     font-weight: bold;
+    font-family: helvetica-th;
+
 
 }
-
+.textoSecundario2 {
+    font-size: 1.2rem;
+    font-weight: 200;
+    font-family: helvetica-th;
+   
+}
 .textoSecundario {
     font-size: 1.2rem;
     font-weight: 200;
+    font-family: helvetica-th;
+    /* padding-bottom: 1rem; */
+}
+.tituloContacto {
+    font-family: helvetica-th;
+    
 }
 
 .titulosPortfolio2 {
     padding: 2vh 0vw;
+    font-family: helvetica-th;
 }
 
 .textoIncio h2 {
@@ -217,6 +235,7 @@ footer .footerBottom {
     justify-items: center;
     align-self: center;
     justify-self: center;
+    font-family: helvetica-th;
 }
 
 /* Clientes */
@@ -302,7 +321,15 @@ footer .footerBottom {
     /* text-align: center; */
     margin: 1vh 20vw 0vh 20vw;
     font-weight: bold;
-    font-size: 2.3rem;
+    font-size: 1.8rem;
+
+}
+.tituloProyectos1{
+    /* text-align: center; */
+    margin: 1vh 20vw 0vh 20vw;
+    font-weight: bold;
+    font-size: 2.2rem;
+
 
 }
 
@@ -367,8 +394,8 @@ footer .footerBottom {
 
 .cajaContenedora3 video {
     padding-top: 0vh;
-    width: 90vw;
-    height: 80vh;
+    width: 60vw;
+    height: 75vh;
     object-fit: cover;
     border-radius: 15px;
 
@@ -394,6 +421,7 @@ footer .footerBottom {
     height: 40vh;
     width:45vw;
     object-fit: cover;
+    margin-top: 2rem;
 }
 
 /* RESPONSIVES */
