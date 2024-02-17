@@ -226,14 +226,7 @@ footer .footerBottom {
     
     /* padding-bottom: 1rem; */
 }
-.textoSecundario3 {
-    font-size: 1rem;
-    font-weight: 200;
-    font-family: helvetica-th;
-    text-align: justify;
-    
-    /* padding-bottom: 1rem; */
-}
+
 
 .tituloContacto {
     font-family: helvetica-th;
@@ -469,9 +462,8 @@ footer .footerBottom {
     .textoSecundario {
         text-align:left;
     }
-    .textoSecundario3 {
-        text-align:center;
-    }
+    
+    
     
     .textoBio{
         text-align: left;
