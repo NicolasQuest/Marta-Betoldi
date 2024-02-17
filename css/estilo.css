@@ -455,6 +455,15 @@ footer .footerBottom {
 @media (min-width: 0px) and (max-width: 1200px) {
     /* BIO */
 
+
+    .textoSecundario {
+        text-align:left;
+    }
+    
+    .textoBio{
+        text-align: left;
+    }
+
     .cajaContenedora1,
     .cajaContenedora2 {
         display: grid;
