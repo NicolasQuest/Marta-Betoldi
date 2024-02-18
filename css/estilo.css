@@ -533,7 +533,21 @@ footer .footerBottom {
     height: 280px;
   
 }
+.logos2:before,
+.logos2:after {
+    position: absolute;
+    top: 0;
+    width: 50px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+}
 
+
+.textoSecundario4 {
+    font-size: 0.8rem;
+    text-align: left;
+}
    
     /* BIO */
 
