@@ -80,8 +80,8 @@ header {
     font-size: 1.8rem;
 }
 
-.negrita{
-    
+.negrita {
+
     font-weight: bold;
 }
 
@@ -228,8 +228,8 @@ footer .footerBottom {
     font-weight: 200;
     font-family: helvetica-th;
     text-align: justify;
-    
-    
+
+
     /* padding-bottom: 1rem; */
 }
 
@@ -254,7 +254,7 @@ footer .footerBottom {
 
 .textoIncio h2 {
     text-align: center;
-    
+
     font-family: helvetica-th;
 }
 
@@ -426,6 +426,7 @@ footer .footerBottom {
     border-top-right-radius: 8px;
     border-top-left-radius: 8px;
 }
+
 /* .video2 {
     height: 50vh;
     width: 40vw;
@@ -466,7 +467,7 @@ footer .footerBottom {
     font-size: 1.8rem;
     text-align: center;
     font-weight: bolder;
-    
+
 
 }
 
@@ -482,6 +483,7 @@ footer .footerBottom {
     margin: 2vh 20vw;
 
 }
+
 .cajaContenedora5 {
     margin: 2vh 20vw;
 
@@ -527,41 +529,42 @@ footer .footerBottom {
 /* RESPONSIVES */
 
 @media (min-width: 0px) and (max-width: 1200px) {
-   
-   /* Index */
-   .logos-slide2 img {
-    height: 280px;
-  
-}
-.logos2:before,
-.logos2:after {
-    position: absolute;
-    top: 0;
-    width: 50px;
-    height: 100%;
-    content: "";
-    z-index: 2;
-}
+
+    /* Index */
+    .logos-slide2 img {
+        height: 280px;
+
+    }
+
+    .logos2:before,
+    .logos2:after {
+        position: absolute;
+        top: 0;
+        width: 50px;
+        height: 100%;
+        content: "";
+        z-index: 2;
+    }
 
 
-.textoSecundario4 {
-    font-size: 0.6rem;
-    text-align: left;
+    .textoSecundario4 {
+        font-size: 0.6rem;
+        text-align: left;
 
-}
-   
+    }
+
     /* BIO */
 
-   
+
 
 
     .textoSecundario {
-        text-align:left;
+        text-align: left;
     }
-    
-    
-    
-    .textoBio{
+
+
+
+    .textoBio {
         text-align: left;
     }
 
@@ -575,6 +578,7 @@ footer .footerBottom {
         padding-left: 0vh;
         padding-top: 5vh;
     }
+
     .cajaContenedora1 img {
 
         height: 55vh;
@@ -590,9 +594,10 @@ footer .footerBottom {
 
 
     }
+
     footer .iconos a {
-       
-       
+
+
         font-size: 18px;
     }
 
@@ -603,25 +608,33 @@ footer .footerBottom {
     .fotito {
         height: 30vh;
         width: 60vw;
-        object-fit:scale-down;
+        object-fit: scale-down;
         /* object-fit: scale-down; */
-        
+
         object-position: top;
 
 
     }
 
+    /* Index */
+    .textoSecundario4 {
+        font-size: 0.4rem;
+        text-align: left;
 
-.textoSecundario4 {
-    font-size: 0.4rem;
-    text-align: left;
+    }
 
-}
+    .logos2:hover .logos-slide2 {
+        animation-play-state:running;
+    
+    }
+
+
+    /*  */
     .logos {
         padding: 40px 0;
 
     }
-    
+
 
 
     h1 {
@@ -687,10 +700,11 @@ footer .footerBottom {
 
 
     }
+
     .video {
         height: 20.5vh;
-        width: 61vw ;
-        
+        width: 61vw;
+
     }
 
 }
@@ -698,13 +712,13 @@ footer .footerBottom {
 @media (min-width: 600px) and (max-width: 999px) {
     /* BIO */
 
-   
-   .video {
-        
+
+    .video {
+
         width: 60vw;
         height: 30vh;
-       
-        
+
+
 
 
     }
@@ -713,13 +727,13 @@ footer .footerBottom {
 @media (min-width: 1000px) and (max-width: 1200px) {
     /* BIO */
 
-   
-   .video {
-        
+
+    .video {
+
         width: 60vw;
         height: 40vh;
-       
-        
+
+
 
 
     }
