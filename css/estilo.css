@@ -545,8 +545,9 @@ footer .footerBottom {
 
 
 .textoSecundario4 {
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     text-align: left;
+
 }
    
     /* BIO */
@@ -610,6 +611,12 @@ footer .footerBottom {
 
     }
 
+
+.textoSecundario4 {
+    font-size: 0.4rem;
+    text-align: left;
+
+}
     .logos {
         padding: 40px 0;
 
