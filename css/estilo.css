@@ -234,12 +234,10 @@ footer .footerBottom {
 }
 
 .textoSecundario4 {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     font-weight: Bold;
     font-family: helvetica-th;
     text-align: justify;
-    position: absolute;
-    top: 200px;
     text-transform: uppercase;
 }
 
@@ -359,7 +357,7 @@ footer .footerBottom {
     background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
 }
 
-.logos2 .cajaContenedora4 .logos-slide2 {
+.logos2:hover .logos-slide2 {
     animation-play-state: paused;
 
 }
@@ -370,7 +368,7 @@ footer .footerBottom {
 }
 
 .logos-slide2 img {
-    height: 280px;
+    height: 350px;
     margin: 0 20px;
 }
 
@@ -529,6 +527,14 @@ footer .footerBottom {
 /* RESPONSIVES */
 
 @media (min-width: 0px) and (max-width: 1200px) {
+   
+   /* Index */
+   .logos-slide2 img {
+    height: 280px;
+  
+}
+
+   
     /* BIO */
 
    
