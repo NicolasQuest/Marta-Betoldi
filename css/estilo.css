@@ -618,13 +618,13 @@ footer .footerBottom {
 
     /* Index */
     .textoSecundario4 {
-        font-size: 0.4rem;
+        border-bottom: 0.2px solid rgb(50, 49, 49);
         text-align: left;
 
     }
 
     .logos2:hover .logos-slide2 {
-        animation-play-state:running;
+        animation-play-state:unset;
     
     }
 
