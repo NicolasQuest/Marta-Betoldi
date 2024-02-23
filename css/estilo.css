@@ -548,8 +548,11 @@ footer .footerBottom {
 
 
     .textoSecundario4 {
-        font-size: 0.6rem;
+        font-size: 1.4rem;
         text-align: left;
+        text-transform: none;
+        text-decoration: none;
+
 
     }
 
