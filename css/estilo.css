@@ -21,6 +21,12 @@ html {
     flex-direction: column;
     min-height: 100%;
     background-color: rgb(255, 255, 255);
+   
+        overflow-x: hidden;  /* Esto previene desbordes horizontales */
+        margin: 0;
+        padding: 0;
+        
+
     /*  rgb(223, 212, 212); */
 
 }
@@ -65,17 +71,23 @@ p {
     font-family: helvetica-th;
 }
 
-
-
-
-/* NAV */
-header {
-    display: flex;
-    margin: 4vh 20vw;
-    justify-content: space-between;
-    border-bottom: 1px rgb(34, 33, 33) solid;
+ .locura{
+    backdrop-filter: blur(10px);
+    font-family: helvetica-th !important; 
+   
+ }
+.elBody {
+    min-height: 100%;
+    padding-top: 80px;
 }
 
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 2vh 0;
+    width: 60vw; /* o max-width si preferís */
+}
 .navbar-brand h1 {
     font-size: 1.8rem;
 }
@@ -183,9 +195,10 @@ footer .footerBottom {
 }
 
 .cajaContenedora1 img {
+    margin-top: 13px;
     border-radius: 10px;
     object-fit: cover;
-    height: 34vh;
+    height: 46vh;
     width: 28vw;
     margin-bottom: 4vh;
     filter: brightness(90%);
@@ -194,6 +207,7 @@ footer .footerBottom {
 .cajaContenedora1 img:hover {
     filter: brightness(100%);
     cursor: pointer;
+
 
 }
 
