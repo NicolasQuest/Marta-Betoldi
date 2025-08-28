@@ -13,6 +13,7 @@
 
 html {
     height: 100%;
+    
 
 }
 
@@ -74,8 +75,16 @@ p {
  .locura{
     backdrop-filter: blur(10px);
     font-family: helvetica-th !important; 
-   
+    
  }
+ .locura2{
+    margin:  0px 100px;
+ }
+ .navbar-padded .container {
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+  }
+  
 .elBody {
     min-height: 100%;
     padding-top: 80px;
@@ -175,7 +184,7 @@ footer .footerBottom {
 }
 
 .textoBio {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 300;
     font-family: helvetica-th;
     text-align: justify;
@@ -198,10 +207,11 @@ footer .footerBottom {
     margin-top: 13px;
     border-radius: 10px;
     object-fit: cover;
-    height: 46vh;
-    width: 28vw;
+    height: 55dvh;
+    width: 25dvw;
     margin-bottom: 4vh;
     filter: brightness(90%);
+    object-position: top;
 }
 
 .cajaContenedora1 img:hover {
@@ -289,7 +299,13 @@ footer .footerBottom {
     padding: 60px 0;
     background: white;
     white-space: nowrap;
-    position: relative;
+    position: relative; 
+    display: flex;
+}
+
+.logos-slide {
+    display: flex; 
+    animation: slide 35s linear infinite;
 }
 
 .logos:before,
@@ -319,10 +335,6 @@ footer .footerBottom {
 
 }
 
-.logos-slide {
-    display: inline-block;
-    animation: 35s slide infinite linear;
-}
 
 .logos-slide img {
     height: 70px;
@@ -534,10 +546,12 @@ footer .footerBottom {
 }
 
 .fotito {
-    height: 40vh;
-    width: 45vw;
+    height: 50vh;
+    width: 41vw;
     object-fit: cover;
     margin-top: 2rem;
+    border-radius: 10px;
+    
 }
 
 /* RESPONSIVES */
@@ -595,7 +609,7 @@ footer .footerBottom {
         padding-left: 0vh;
         padding-top: 5vh;
     }
-
+    
     .cajaContenedora1 img {
 
         height: 55vh;
