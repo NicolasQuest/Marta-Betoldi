@@ -39,3 +39,8 @@ body.elBody {
 .navbar .navbar-brand {
     color: var(--color-text-strong);
 }
+
+/* Logos de un solo color (negros) en el carousel de plataformas: blancos en oscuro */
+:root[data-theme="dark"] .logo-mono {
+    filter: invert(1);
+}
