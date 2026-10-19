@@ -281,7 +281,16 @@ li a {
 
 .logos-slide {
     display: flex; 
+    flex-shrink: 0;
     animation: slide 35s linear infinite;
+}
+
+/* El carousel también tiene cajaContenedora3 (justify-content: center). Centrado, las
+   dos tiras (más anchas que la caja) quedaban corridas y al final de cada vuelta la
+   segunda copia se terminaba y quedaba un hueco vacío. Alineadas a la izquierda, la
+   segunda copia siempre cubre lo que deja la primera. */
+.logos.cajaContenedora3 {
+    justify-content: flex-start;
 }
 
 .logos:before,
