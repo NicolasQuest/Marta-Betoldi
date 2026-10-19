@@ -1,0 +1,109 @@
+.projectsGrid {
+    --cols-max: 5;
+    --gap: 24px;
+    display: grid;
+    /* Hasta 5 por fila; si no entran con al menos 170px cada una, baja a 4, 3, 2… */
+    grid-template-columns: repeat(
+        auto-fill,
+        minmax(max(170px, calc((100% - (var(--cols-max) - 1) * var(--gap)) / var(--cols-max))), 1fr)
+    );
+    gap: var(--gap);
+    width: 100%;
+    margin: 2vh 0 4vh;
+    padding: 0;
+    list-style: none;
+}
+
+/* La card: el póster y, encima, una capa oscura con "Saber más +" que aparece en hover */
+.projectCard {
+    position: relative;
+    display: block;
+    aspect-ratio: 2 / 3;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+    color: white;
+    text-decoration: none;
+}
+
+.projectCard img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.projectCard-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+}
+
+.projectCard-cta {
+    font-size: 1.1rem;
+    letter-spacing: 0.04em;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 2px;
+}
+
+/* Sin animación: la capa aparece de golpe. En táctil no hay hover y la card es un link directo */
+.projectCard:hover .projectCard-overlay,
+.projectCard:focus-visible .projectCard-overlay {
+    opacity: 1;
+}
+
+.projectCard:hover,
+.projectCard:focus-visible {
+    color: white;
+}
+
+.projectCard:focus-visible {
+    outline: 2px solid black;
+    outline-offset: 4px;
+}
+
+/* Página de detalle */
+.projectDetail {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    margin: 2vh 0 4vh;
+}
+
+.projectDetail-poster {
+    width: min(320px, 100%);
+    border-radius: 6px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.projectDetail-text {
+    flex: 1;
+}
+
+.projectDetail-genre {
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: rgb(117, 116, 116);
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 767px) {
+    .projectDetail {
+        flex-direction: column;
+    }
+
+    /* Los 20vw de margen de cajaContenedora2 dejan la grilla en una columna angosta */
+    #proyectos,
+    #proyecto {
+        margin: 2vh 16px;
+    }
+
+    .projectsGrid {
+        --gap: 16px;
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    }
+}

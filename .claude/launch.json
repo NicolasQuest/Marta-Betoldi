@@ -1,0 +1,41 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "vite",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run",
+        "dev",
+        "--",
+        "--port",
+        "5173"
+      ],
+      "port": 5173
+    },
+    {
+      "name": "original",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "5500",
+        "-d",
+        "/private/tmp/claude-501/-Users-maquinita--claude-spares-spare-RsUyYq/6f2533f2-f2e9-482b-b5ff-9956d2897b7c/scratchpad/original"
+      ],
+      "port": 5500
+    },
+    {
+      "name": "build",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "5600",
+        "-d",
+        "/Users/maquinita/Desktop/Marta-Betoldi/dist"
+      ],
+      "port": 5600
+    }
+  ]
+}

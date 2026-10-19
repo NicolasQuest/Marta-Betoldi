@@ -87,6 +87,10 @@ p {
   
 .elBody {
     min-height: 100%;
+}
+
+/* Solo el <body> deja lugar al navbar fijo; el div#elBody del Layout no suma otros 80px */
+body.elBody {
     padding-top: 80px;
 }
 
@@ -152,20 +156,6 @@ footer {
 .footerTexto {
     font-size: 0.5rem;
     text-align: center;
-}
-
-footer .iconos {
-    display: flex;
-    justify-content: center;
-}
-
-footer .iconos a {
-    text-decoration: none;
-    padding: 0px 15px;
-    margin: 0px 0px 0px 20px;
-    border-radius: 50px;
-    color: rgb(6, 6, 6);
-    font-size: 30px;
 }
 
 footer .footerBottom {
@@ -626,12 +616,6 @@ footer .footerBottom {
 
     }
 
-    footer .iconos a {
-
-
-        font-size: 18px;
-    }
-
 }
 
 @media (min-width: 0px) and (max-width: 600px) {
@@ -805,3 +789,59 @@ footer .footerBottom {
         margin-left:20vw ;
     }
     } 
+*/
+
+/* Subtítulo de Bio ("Autora, Guionista, Dramaturga"): 4px más que el estilo base */
+.bioSubtitle .textoSecundario4 {
+    font-size: calc(1.2rem + 4px);
+}
+
+@media (max-width: 1200px) {
+    .bioSubtitle .textoSecundario4 {
+        font-size: calc(1.4rem + 4px);
+    }
+}
+
+/* Selector de idioma ES | EN: el activo más oscuro y en negrita */
+.langSwitch {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.langSwitch-item {
+    display: flex;
+    align-items: center;
+}
+
+.langSwitch .nav-link {
+    padding-left: 0.4rem;
+    padding-right: 0.4rem;
+}
+
+.langSwitch .nav-link.active {
+    font-weight: bold;
+    color: black;
+}
+
+.langSwitch-sep {
+    color: rgba(0, 0, 0, 0.35);
+}
+
+/* Redes en Contacto (debajo de Management) */
+.contactSocials {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 12px;
+}
+
+.contactSocials a {
+    color: rgb(6, 6, 6);
+    font-size: 28px;
+    text-decoration: none;
+}
+
+.contactSocials a:hover {
+    color: rgb(117, 116, 116);
+}
