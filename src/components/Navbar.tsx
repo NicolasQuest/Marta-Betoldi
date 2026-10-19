@@ -16,6 +16,13 @@ const languages: { code: Lang; label: string; name: string }[] = [
   { code: 'en', label: 'EN', name: 'English' },
 ]
 
+// Bio ('/') solo cuando la URL es exactamente '/'; el resto también en sus subpáginas
+// (/proyectos/edha marca Proyectos). Provisional hasta el router.
+function isActive(href: string) {
+  const path = window.location.pathname.replace(/\/+$/, '') || '/'
+  return href === '/' ? path === '/' : path === href || path.startsWith(`${href}/`)
+}
+
 export default function Navbar() {
   const { t, lang, setLang } = useLanguage()
 
@@ -38,14 +45,21 @@ export default function Navbar() {
 
         <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul className="navbar-nav text-end">
-            {sections.map((s) => (
-              <li className="nav-item" key={s.key}>
-                {/* TODO: la clase active la pone NavLink según la ruta actual */}
-                <a className="nav-link" href={s.href}>
-                  {t.nav[s.key]}
-                </a>
-              </li>
-            ))}
+            {sections.map((s) => {
+              const active = isActive(s.href)
+              return (
+                <li className="nav-item" key={s.key}>
+                  {/* TODO: con el router, <NavLink end={s.href === '/'}> pone el active solo */}
+                  <a
+                    className={`nav-link${active ? ' active' : ''}`}
+                    href={s.href}
+                    aria-current={active ? 'page' : undefined}
+                  >
+                    {t.nav[s.key]}
+                  </a>
+                </li>
+              )
+            })}
             <li className="nav-item langSwitch" role="group" aria-label={t.nav.language}>
               {languages.map((l, i) => (
                 <span key={l.code} className="langSwitch-item">

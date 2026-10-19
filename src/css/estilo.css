@@ -802,7 +802,7 @@ footer .footerBottom {
     }
 }
 
-/* Selector de idioma ES | EN: el activo más oscuro y en negrita */
+/* Selector de idioma ES | EN (el activo, igual que la página activa: ver .navbar-nav .nav-link.active) */
 .langSwitch {
     display: flex;
     align-items: center;
@@ -819,7 +819,8 @@ footer .footerBottom {
     padding-right: 0.4rem;
 }
 
-.langSwitch .nav-link.active {
+/* Página activa del menú e idioma activo: más oscuro y en negrita */
+.navbar-nav .nav-link.active {
     font-weight: bold;
     color: black;
 }
