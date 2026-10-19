@@ -31,30 +31,41 @@
     list-style: none;
 }
 
-/* La card: un marco 2:3 igual para todas; adentro el póster ENTERO (sin recorte) a su
-   proporción, apoyado abajo. Los pósters van de 0.67 a 0.81 de ancho/alto: los más
-   anchos quedan un poco más bajos en vez de perder los costados. */
+/* La card: todas del mismo tamaño (marco 5:7) y el póster ENTERO adentro, sin recorte.
+   Los pósters van de 0.67 a 0.81 de ancho/alto; 5:7 (0.71) está en el medio, así
+   las franjas que sobran son chicas y las rellena el mismo póster difuminado. */
 .projectCard {
-    display: flex;
-    align-items: flex-end;
-    aspect-ratio: 2 / 3;
+    display: block;
     color: white;
     text-decoration: none;
 }
 
-/* El póster en sí: acá van el borde redondeado, la sombra y la capa del hover */
 .projectCard-poster {
     position: relative;
-    width: 100%;
+    display: block;
+    aspect-ratio: 5 / 7;
     overflow: hidden;
     border-radius: 6px;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+    background: #222;
 }
 
-.projectCard-poster img {
-    display: block;
+.projectCard-bg,
+.projectCard-img {
+    position: absolute;
+    inset: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
+}
+
+.projectCard-bg {
+    object-fit: cover;
+    filter: blur(14px) brightness(0.75);
+    transform: scale(1.15); /* que el difuminado no deje bordes claros */
+}
+
+.projectCard-img {
+    object-fit: contain;
 }
 
 .projectCard-overlay {

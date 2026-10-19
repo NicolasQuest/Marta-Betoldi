@@ -23,7 +23,9 @@ export default function ProjectsGrid() {
                   {/* TODO: con el router, cambiar por <Link to={`/proyectos/${p.slug}`}> */}
                   <a className="projectCard" href={`/proyectos/${p.slug}`} aria-label={`${p.title}: ${t.projects.learnMore}`}>
                     <span className="projectCard-poster">
-                      <img src={p.poster} alt={p.title} loading="lazy" />
+                      {/* Fondo: el mismo póster ampliado y difuminado, rellena lo que sobra del marco */}
+                      <img className="projectCard-bg" src={p.poster} alt="" aria-hidden="true" loading="lazy" />
+                      <img className="projectCard-img" src={p.poster} alt={p.title} loading="lazy" />
                       <span className="projectCard-overlay" aria-hidden="true">
                         <span className="projectCard-cta">{t.projects.learnMore}</span>
                       </span>

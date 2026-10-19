@@ -818,12 +818,22 @@ li a {
     color: rgba(0, 0, 0, 0.35);
 }
 
+/* Contacto: un poco más de aire entre título, líneas e iconos */
+#contacto {
+    margin-top: 4vh;
+}
+
+#contacto .textoSecundario2 {
+    line-height: 1.9;
+    margin-bottom: 0;
+}
+
 /* Redes en Contacto (debajo de Management) */
 .contactSocials {
     display: flex;
     justify-content: center;
-    gap: 24px;
-    margin-top: 12px;
+    gap: 28px;
+    margin-top: 24px;
 }
 
 .contactSocials a {
