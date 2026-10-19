@@ -121,7 +121,11 @@ export const es = {
 
   contact: {
     title: 'Contacto',
-    agent: 'Agente',
+    intro: 'Para proyectos, colaboraciones o consultas de prensa, el contacto es directo por email o a través de mi representación.',
+    email: 'Email',
+    agent: 'Representación',
+    socials: 'Redes',
+    writeEmail: 'Escribir un email',
   },
 }
 

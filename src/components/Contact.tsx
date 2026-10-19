@@ -1,5 +1,8 @@
 import PageTitle from './PageTitle'
 import { useLanguage } from '../i18n/LanguageContext'
+import './Contact.css'
+
+const EMAIL = 'martabetoldi@gmail.com'
 
 const socials = [
   { href: 'https://www.instagram.com/martabetoldi/?hl=es', icon: 'fa-instagram', label: 'Instagram' },
@@ -12,26 +15,42 @@ export default function Contact() {
   return (
     <>
       <PageTitle>{t.contact.title}</PageTitle>
-      <div className="cajaContenedora3 fadeIn" id="contacto">
-        <div className="portfolio">
-          <p className="textoSecundario2">
-            Email:{' '}
-            <a className="link-vision" href="mailto:martabetoldi@gmail.com">
-              Martabetoldi@gmail.com
-            </a>
-            <br />
-            {t.contact.agent}:{' '}
-            <a className="link-vision" target="_blank" href="https://www.vision-la.com/">
-              Vision Entertainment
-            </a>
-          </p>
-          <div className="contactSocials">
-            {socials.map((s) => (
-              <a key={s.icon} href={s.href} target="_blank" rel="noreferrer" className={`fa ${s.icon}`} aria-label={s.label}></a>
-            ))}
+      <section className="contact fadeIn" id="contacto">
+        <p className="contact-intro">{t.contact.intro}</p>
+
+        {/* Mismo patrón que Prensa y Proyectos: etiqueta chica en gris + valor */}
+        <dl className="contact-list">
+          <div className="contact-row">
+            <dt>{t.contact.email}</dt>
+            <dd>
+              <a className="link-vision" href={`mailto:${EMAIL}`}>{EMAIL}</a>
+            </dd>
           </div>
-        </div>
-      </div>
+          <div className="contact-row">
+            <dt>{t.contact.agent}</dt>
+            <dd>
+              <a className="link-vision" href="https://www.vision-la.com/" target="_blank" rel="noreferrer">
+                Vision Entertainment
+              </a>
+            </dd>
+          </div>
+          <div className="contact-row">
+            <dt>{t.contact.socials}</dt>
+            <dd className="contact-socials">
+              {socials.map((s) => (
+                <a key={s.icon} className="link-vision" href={s.href} target="_blank" rel="noreferrer">
+                  <i className={`fa ${s.icon}`} aria-hidden="true"></i>
+                  {s.label}
+                </a>
+              ))}
+            </dd>
+          </div>
+        </dl>
+
+        <a className="contact-cta" href={`mailto:${EMAIL}`}>
+          {t.contact.writeEmail} →
+        </a>
+      </section>
     </>
   )
 }

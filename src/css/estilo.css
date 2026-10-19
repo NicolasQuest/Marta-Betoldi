@@ -818,34 +818,6 @@ li a {
     color: var(--color-separator);
 }
 
-/* Contacto: un poco más de aire entre título, líneas e iconos */
-#contacto {
-    margin-top: 4vh;
-}
-
-#contacto .textoSecundario2 {
-    line-height: 1.9;
-    margin-bottom: 0;
-}
-
-/* Redes en Contacto (debajo de Management) */
-.contactSocials {
-    display: flex;
-    justify-content: center;
-    gap: 28px;
-    margin-top: 24px;
-}
-
-.contactSocials a {
-    color: var(--color-text-strong);
-    font-size: 28px;
-    text-decoration: none;
-}
-
-.contactSocials a:hover {
-    color: var(--color-text-muted);
-}
-
 /* Botón sol / luna, al lado de ES | EN */
 .themeToggle {
     display: flex;
@@ -857,4 +829,19 @@ li a {
     align-items: center;
     padding-left: 0.6rem;
     padding-right: 0.4rem;
+}
+
+/* Centrado óptico con las mayúsculas del menú (no con la caja de la línea, que
+   incluye el espacio de los descendentes y deja el icono más bajo) */
+.themeToggle svg {
+    transform: translateY(-0.17em);
+}
+
+/* Menú móvil (colapsado): sin padding a la derecha, así ES | EN y el sol/luna
+   quedan alineados al mismo borde que Proyectos, Prensa, etc. */
+@media (max-width: 991.98px) {
+    .langSwitch-item:last-child .nav-link,
+    .themeToggle .nav-link {
+        padding-right: 0;
+    }
 }

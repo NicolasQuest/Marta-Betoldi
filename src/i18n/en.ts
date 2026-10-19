@@ -106,6 +106,10 @@ export const en: Translations = {
 
   contact: {
     title: 'Contact',
+    intro: 'For projects, collaborations or press inquiries, reach out directly by email or through my representation.',
+    email: 'Email',
     agent: 'Management',
+    socials: 'Social',
+    writeEmail: 'Send an email',
   },
 }
