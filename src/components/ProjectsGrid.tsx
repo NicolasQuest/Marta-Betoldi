@@ -2,6 +2,7 @@ import { useEffect, useRef, useState, type KeyboardEvent } from 'react'
 import { categories, projects, type ProjectCategory } from '../data/projects'
 import { useLanguage } from '../i18n/LanguageContext'
 import './ProjectsGrid.css'
+import { Link } from 'react-router'
 
 // La pestaña activa va en el hash (/proyectos#theater) para que "Volver" desde un
 // proyecto, o un link compartido, abran la misma categoría.
@@ -67,15 +68,14 @@ export default function ProjectsGrid() {
         <ul className="projectsGrid">
           {items.map((p) => (
             <li key={p.slug}>
-              {/* TODO: con el router, cambiar por <Link to={`/proyectos/${p.slug}`}> */}
-              <a className="projectCard" href={`/proyectos/${p.slug}`} aria-label={`${p.title}: ${t.projects.learnMore}`}>
-                <span className="projectCard-poster">
-                  <img className="projectCard-img" src={p.poster} alt={p.title} loading="lazy" />
-                  <span className="projectCard-overlay" aria-hidden="true">
-                    <span className="projectCard-cta">{t.projects.learnMore}</span>
-                  </span>
-                </span>
-              </a>
+                <Link className="projectCard" to={`/proyectos/${p.slug}`} aria-label={`${p.title}: ${t.projects.learnMore}`}>
+                    <span className="projectCard-poster">
+                      <img className="projectCard-img" src={p.poster} alt={p.title} loading="lazy" />
+                      <span className="projectCard-overlay" aria-hidden="true">
+                        <span className="projectCard-cta">{t.projects.learnMore}</span>
+                      </span>
+                    </span>
+              </Link>
             </li>
           ))}
         </ul>

@@ -1,9 +1,9 @@
 import { useLanguage, type Lang } from '../i18n/LanguageContext'
 import { useTheme } from '../theme/ThemeContext'
 import { MoonIcon, SunIcon } from './ThemeIcons'
+import { Link, NavLink } from 'react-router'
 
 // Rutas de cada página; no se traducen, solo cambia el texto del link.
-// TODO: con el router, cambiar <a href> por <Link to> / <NavLink to>
 export const sections = [
   { key: 'projects', href: '/proyectos' },
   { key: 'press', href: '/prensa' },
@@ -17,15 +17,6 @@ const languages: { code: Lang; label: string; name: string }[] = [
   { code: 'en', label: 'EN', name: 'English' },
 ]
 
-// Página activa, también en sus subpáginas (/proyectos/edha marca Proyectos).
-// Provisional hasta el router.
-const currentPath = () => window.location.pathname.replace(/\/+$/, '') || '/'
-
-function isActive(href: string) {
-  const path = currentPath()
-  return href === '/' ? path === '/' : path === href || path.startsWith(`${href}/`)
-}
-
 export default function Navbar() {
   const { t, lang, setLang } = useLanguage()
   const { theme, toggleTheme } = useTheme()
@@ -34,10 +25,10 @@ export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg fixed-top locura navbar-padded">
       <div className="container d-flex justify-content-between align-items-center">
-        {/* El nombre es el link a Bio (home). TODO: con el router, <Link to="/"> */}
-        <a className="navbar-brand" href="/" aria-current={isActive('/') ? 'page' : undefined}>
-          Marta Betoldi
-        </a>
+        {/* El nombre es el link a Bio (home) */}
+          <Link className="navbar-brand" to="/">
+              Marta Betoldi
+          </Link>
 
         <button
           className="navbar-toggler"
@@ -53,21 +44,15 @@ export default function Navbar() {
 
         <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul className="navbar-nav text-end">
-            {sections.map((s) => {
-              const active = isActive(s.href)
-              return (
-                <li className="nav-item" key={s.key}>
-                  {/* TODO: con el router, <NavLink> pone el active solo */}
-                  <a
-                    className={`nav-link${active ? ' active' : ''}`}
-                    href={s.href}
-                    aria-current={active ? 'page' : undefined}
-                  >
-                    {t.nav[s.key]}
-                  </a>
-                </li>
-              )
-            })}
+              {sections.map((s) => (
+                  <li className="nav-item" key={s.key}>
+                      {/* NavLink pone la clase "active" y aria-current="page" solo,
+                    también en subpáginas (/proyectos/edha marca Proyectos) */}
+                      <NavLink className="nav-link" to={s.href}>
+                          {t.nav[s.key]}
+                      </NavLink>
+                  </li>
+              ))}
             <li className="nav-item langSwitch" role="group" aria-label={t.nav.language}>
               {languages.map((l, i) => (
                 <span key={l.code} className="langSwitch-item">

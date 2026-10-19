@@ -14,13 +14,16 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import App from './App'
 import { LanguageProvider } from './i18n/LanguageContext'
 import { ThemeProvider } from './theme/ThemeContext'
+import {BrowserRouter} from 'react-router';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <ThemeProvider>
-      <LanguageProvider>
-        <App />
-      </LanguageProvider>
-    </ThemeProvider>
+      <BrowserRouter>
+        <ThemeProvider>
+            <LanguageProvider>
+                <App />
+            </LanguageProvider>
+        </ThemeProvider>
+    </BrowserRouter>
   </StrictMode>,
 )

@@ -2,20 +2,20 @@ import PageSection from '../components/PageSection'
 import { findProject } from '../data/projects'
 import { useLanguage } from '../i18n/LanguageContext'
 import '../components/ProjectsGrid.css'
+import { Link, useParams } from 'react-router'
 
 // Detalle de un proyecto: /proyectos/:slug
-// TODO: con el router, sacar el slug de useParams() en vez de recibirlo por prop
-export default function ProyectoPage({ slug }: { slug: string }) {
-  const { t } = useLanguage()
-  const project = findProject(slug)
+export default function ProyectoPage() {
+    const { slug = '' } = useParams()
+    const { t } = useLanguage()
+    const project = findProject(slug)
 
-  // Vuelve a Proyectos en la pestaña de este proyecto (Series, Teatro o Podcast)
-  // TODO: con el router, cambiar los <a href> por <Link to>
-  const backLink = (
-    <a className="link-vision" href={project ? `/proyectos#${project.category}` : '/proyectos'}>
-      {t.projects.back}
-    </a>
-  )
+    // Vuelve a Proyectos en la pestaña de este proyecto (Series, Teatro o Podcast)
+    const backLink = (
+        <Link className="link-vision" to={project ? `/proyectos#${project.category}` : '/proyectos'}>
+            {t.projects.back}
+        </Link>
+    )
 
   if (!project) {
     return (
