@@ -1,4 +1,6 @@
 import { useLanguage, type Lang } from '../i18n/LanguageContext'
+import { useTheme } from '../theme/ThemeContext'
+import { MoonIcon, SunIcon } from './ThemeIcons'
 
 // Rutas de cada página; no se traducen, solo cambia el texto del link.
 // TODO: con el router, cambiar <a href> por <Link to> / <NavLink to>
@@ -26,6 +28,8 @@ function isActive(href: string) {
 
 export default function Navbar() {
   const { t, lang, setLang } = useLanguage()
+  const { theme, toggleTheme } = useTheme()
+  const isDark = theme === 'dark'
 
   return (
     <nav className="navbar navbar-expand-lg fixed-top locura navbar-padded">
@@ -80,6 +84,17 @@ export default function Navbar() {
                   </button>
                 </span>
               ))}
+            </li>
+            <li className="nav-item themeToggle">
+              {/* Muestra a qué modo pasás: luna en claro, sol en oscuro */}
+              <button
+                type="button"
+                className="nav-link"
+                onClick={toggleTheme}
+                aria-label={isDark ? t.nav.lightMode : t.nav.darkMode}
+              >
+                {isDark ? <SunIcon /> : <MoonIcon />}
+              </button>
             </li>
           </ul>
         </div>

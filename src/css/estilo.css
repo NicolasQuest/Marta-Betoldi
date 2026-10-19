@@ -21,7 +21,7 @@ html {
     display: flex;
     flex-direction: column;
     min-height: 100%;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--color-bg);
    
         overflow-x: hidden;  /* Esto previene desbordes horizontales */
         margin: 0;
@@ -117,7 +117,7 @@ body.elBody {
 
 
 .menuNav a:hover {
-    color: #000000;
+    color: var(--color-text-strong);
 }
 
 .textoLinks {
@@ -149,7 +149,7 @@ li a {
 .cajaContenedora1 {
     display: flex;
     margin: 0vh 20vw;
-    border-bottom: black solid 1px;
+    border-bottom: var(--color-line) solid 1px;
 }
 
 .textoBio {
@@ -269,7 +269,7 @@ li a {
 .logos {
     overflow: hidden;
     padding: 60px 0;
-    background: white;
+    background: var(--color-bg);
     white-space: nowrap;
     position: relative; 
     display: flex;
@@ -293,13 +293,13 @@ li a {
 .logos:before {
     width: 120px;
     left: 0;
-    background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+    background: linear-gradient(to left, transparent, var(--color-bg));
 }
 
 .logos:after {
     width: 120px;
     right: 0;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+    background: linear-gradient(to right, transparent, var(--color-bg));
 }
 
 .logos:hover .logos-slide {
@@ -328,7 +328,7 @@ li a {
 .logos2 {
     overflow: hidden;
     padding: 60px 0;
-    background: white;
+    background: var(--color-bg);
     white-space: nowrap;
     position: relative;
 }
@@ -346,13 +346,13 @@ li a {
 .logos2:before {
     width: 120px;
     left: 0;
-    background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+    background: linear-gradient(to left, transparent, var(--color-bg));
 }
 
 .logos2:after {
     width: 120px;
     right: 0;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+    background: linear-gradient(to right, transparent, var(--color-bg));
 }
 
 .logos2:hover .logos-slide2 {
@@ -617,7 +617,7 @@ li a {
 
     /* Index */
     .textoSecundario4 {
-        border-bottom: 0.2px solid rgb(50, 49, 49);
+        border-bottom: 0.2px solid var(--color-text);
         text-align: left;
 
     }
@@ -740,10 +740,10 @@ li a {
 
 .link-vision{
     text-decoration: none;
-    color: black;
+    color: var(--color-text-strong);
 }
 .link-vision:hover{
-    color: rgb(117, 116, 116);
+    color: var(--color-text-muted);
 }
 /* 
 
@@ -811,11 +811,11 @@ li a {
 /* Página activa del menú e idioma activo: más oscuro y en negrita */
 .navbar-nav .nav-link.active {
     font-weight: bold;
-    color: black;
+    color: var(--color-text-strong);
 }
 
 .langSwitch-sep {
-    color: rgba(0, 0, 0, 0.35);
+    color: var(--color-separator);
 }
 
 /* Contacto: un poco más de aire entre título, líneas e iconos */
@@ -837,11 +837,24 @@ li a {
 }
 
 .contactSocials a {
-    color: rgb(6, 6, 6);
+    color: var(--color-text-strong);
     font-size: 28px;
     text-decoration: none;
 }
 
 .contactSocials a:hover {
-    color: rgb(117, 116, 116);
+    color: var(--color-text-muted);
+}
+
+/* Botón sol / luna, al lado de ES | EN */
+.themeToggle {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.themeToggle .nav-link {
+    display: flex;
+    align-items: center;
+    padding-left: 0.6rem;
+    padding-right: 0.4rem;
 }

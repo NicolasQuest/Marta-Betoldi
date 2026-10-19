@@ -9,7 +9,7 @@
     display: flex;
     justify-content: center;
     gap: 32px;
-    border-bottom: 1px solid #d6d6d6;
+    border-bottom: 1px solid var(--color-border);
 }
 
 .projectsTab {
@@ -22,22 +22,22 @@
     font-size: 1rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: rgb(117, 116, 116);
+    color: var(--color-text-muted);
     cursor: pointer;
 }
 
 .projectsTab:hover {
-    color: black;
+    color: var(--color-text-strong);
 }
 
 .projectsTab.active {
-    color: black;
+    color: var(--color-text-strong);
     font-weight: bold;
-    border-bottom-color: black;
+    border-bottom-color: var(--color-text-strong);
 }
 
 .projectsTab:focus-visible {
-    outline: 2px solid black;
+    outline: 2px solid var(--color-text-strong);
     outline-offset: 2px;
 }
 
@@ -73,7 +73,7 @@
     aspect-ratio: 7 / 10;
     overflow: hidden;
     border-radius: 6px;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 14px var(--color-shadow);
 }
 
 .projectCard-img {
@@ -117,7 +117,7 @@
 }
 
 .projectCard:focus-visible .projectCard-poster {
-    outline: 2px solid black;
+    outline: 2px solid var(--color-text-strong);
     outline-offset: 4px;
 }
 
@@ -132,7 +132,7 @@
 .projectDetail-poster {
     width: min(320px, 100%);
     border-radius: 6px;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 14px var(--color-shadow);
 }
 
 .projectDetail-text {
@@ -156,7 +156,7 @@
     font-size: 0.85rem;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: rgb(117, 116, 116);
+    color: var(--color-text-muted);
     margin-bottom: 1rem;
 }
 

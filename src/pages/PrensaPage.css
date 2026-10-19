@@ -1,0 +1,57 @@
+/* Prensa: lista de notas, mismo lenguaje visual que el detalle de proyecto */
+.pressList {
+    list-style: none;
+    padding: 0;
+    margin: 2vh auto 6vh;
+    max-width: 760px;
+}
+
+.pressItem {
+    padding: 28px 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.pressItem:first-child {
+    border-top: 1px solid var(--color-border);
+}
+
+/* "PÁGINA/12 · 28 DE JULIO DE 2023": igual que el año/género en Proyectos */
+.pressItem-meta {
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    margin-bottom: 0.6rem;
+}
+
+.pressItem-title {
+    font-family: helvetica-th;
+    font-size: 1.35rem;
+    font-weight: 400;
+    line-height: 1.35;
+    color: var(--color-text-strong);
+    margin-bottom: 0.6rem;
+}
+
+.pressItem-description {
+    font-family: helvetica-th;
+    font-size: 1.05rem;
+    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: 0.9rem;
+}
+
+.pressItem-link {
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 2px;
+}
+
+@media (max-width: 767px) {
+    #prensa {
+        margin: 2vh 16px;
+    }
+
+    .pressItem-title {
+        font-size: 1.15rem;
+    }
+}

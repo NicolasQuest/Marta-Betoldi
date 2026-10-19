@@ -11,6 +11,17 @@
     <link rel="icon" type="image/x-icon" href="/fotos/favicon.png">
     <!-- body es flex (.elBody): #root no debe meter una caja intermedia -->
     <style>#root { display: contents; }</style>
+    <!-- Tema antes de pintar, así el modo oscuro no arranca con un flash blanco.
+         Lo elegido con el botón (localStorage) manda; si no, claro. -->
+    <script>
+        (function () {
+            var theme;
+            try { theme = localStorage.getItem('theme'); } catch (e) {}
+            if (theme !== 'light' && theme !== 'dark') theme = 'light';
+            document.documentElement.dataset.theme = theme;
+            document.documentElement.dataset.bsTheme = theme;
+        })();
+    </script>
 </head>
 
 <body class="elBody fadeIn">

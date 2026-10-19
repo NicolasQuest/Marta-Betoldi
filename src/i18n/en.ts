@@ -7,6 +7,8 @@ export const en: Translations = {
     awards: 'Awards',
     contact: 'Contact',
     language: 'Language',
+    darkMode: 'Switch to dark mode',
+    lightMode: 'Switch to light mode',
   },
 
   subtitle: 'Author, Screenwriter, Playwright',
@@ -84,9 +86,21 @@ export const en: Translations = {
         description: 'It blends humor, music and emotion to celebrate life and the desire to keep enjoying it, whatever your age. Starring Mamen García, the story presents a woman who shares her experiences, desires and unfulfilled dreams, in a show that invites reflection on the passing of time, freedom and second chances.',
       },
       'escribiendo-el-fin-del-mundo': {
-        genre: 'Fiction podcast / Audio series - Atresmedia',
+        genre: 'Sonora',
         description: 'Starring Eleonora Wexler and Favio Posca, this audio series tells an intriguing story through sound, drama and suspense. The plot delves into emotional rifts, mysteries and reflections on existence in a world on the brink of collapse, making the most of the immersive language of fiction podcasts to create an enveloping and intimate atmosphere.',
       },
+    },
+  },
+
+  press: {
+    items: {
+      'produ-primetime': { title: 'PRODU primetime — interview with Ríchard Izarra', description: 'Marta talks about building female characters, her work on Betty la Fea: The Story Continues and her catalog of projects.' },
+      'produ-catalogo': { title: '“Escritora Marta Betoldi con un catálogo de buenas historias femeninas que ella misma pitchea”', description: 'An overview of her career as a screenwriter, her take on female characters and her work on Betty la Fea: The Story Continues.' },
+      'pagina12-podcast': { title: '“Actuar y escribir en la era de los podcast”', description: 'On the creation of Escribiendo el fin del mundo, the podcast developed for Atresmedia with Nancy Dupláa.' },
+      'fuera-de-libreto': { title: 'Fuera de libreto — interview with Malena Solda', description: 'A conversation about the role of screenwriters in Argentine fiction, her career and her move from acting to writing. They also recall sharing the cast of Montaña Rusa and the play Contracciones. About 52 minutes long.' },
+      'con-la-gente': { title: '“Los modos que nos tocan en el siglo XXI son femeninos”', description: 'A conversation about her work as a screenwriter and the representation of women in fiction, with references to Socias, Ciega a citas, Solamente vos, Esperanza mía and Las Estrellas.' },
+      'el-dia': { title: '“El fino arte de atar todo con alambre”', description: 'On the work of TV screenwriters, the differences between daily fiction and productions for platforms like Netflix, and Marta’s experience on Las Estrellas and Edha.' },
+      'pagina12-novicia': { title: '“Una vocación más fuerte que la de la Novicia Rebelde”', description: 'Her career, her background in Literature and her work on Ciega a citas. A profile that offers insight into her path and how she works with writing teams.' },
     },
   },
 

@@ -54,13 +54,28 @@ const projectItems = {
     description: 'Combina humor, música y emoción para celebrar la vida y las ganas de seguir disfrutando sin importar la edad. Protagonizada por Mamen García, la historia presenta a una mujer que comparte sus experiencias, deseos y sueños pendientes, en un espectáculo que invita a reflexionar sobre el paso del tiempo, la libertad y las segundas oportunidades.',
   },
   'escribiendo-el-fin-del-mundo': {
-    genre: 'Podcast de ficción / Audio-serie - Atresmedia',
+    genre: 'Sonora',
     description: 'Protagonizada por Eleonora Wexler y Favio Posca, esta audioserie explora una intrigante historia narrada a través del sonido, el drama y el suspenso. La trama se sumerge en las grietas emocionales, los enigmas y las reflexiones sobre la existencia en un mundo al borde del colapso, aprovechando al máximo el lenguaje inmersivo del podcast de ficción para construir una atmósfera envolvente e íntima.',
   },
 } satisfies Record<string, ProjectText>
 
 // Slugs válidos: si se agrega un proyecto en data/projects.ts sin su texto, no compila
 export type ProjectSlug = keyof typeof projectItems
+
+// Notas y entrevistas de Prensa (medio, fecha y link en data/press.ts)
+export type PressText = { title: string; description: string }
+
+const pressTexts = {
+  'produ-primetime': { title: 'PRODU primetime — entrevista con Ríchard Izarra', description: 'Marta habla sobre la construcción de personajes femeninos, su trabajo en Betty, la fea: la historia continúa y su catálogo de proyectos.' },
+  'produ-catalogo': { title: '“Escritora Marta Betoldi con un catálogo de buenas historias femeninas que ella misma pitchea”', description: 'Repasa su recorrido como guionista, su mirada sobre los personajes femeninos y su trabajo en Betty, la fea: la historia continúa.' },
+  'pagina12-podcast': { title: '“Actuar y escribir en la era de los podcast”', description: 'La creación de Escribiendo el fin del mundo, el podcast desarrollado para Atresmedia junto a Nancy Dupláa.' },
+  'fuera-de-libreto': { title: 'Fuera de libreto — entrevista con Malena Solda', description: 'Una charla sobre el rol de los guionistas en la ficción argentina, su recorrido profesional y el paso de la actuación a la escritura. También recuerdan cuando compartieron elenco en Montaña Rusa y la obra Contracciones. Dura unos 52 minutos.' },
+  'con-la-gente': { title: '“Los modos que nos tocan en el siglo XXI son femeninos”', description: 'Una conversación sobre su trabajo como guionista y la representación de las mujeres en la ficción, con referencias a Socias, Ciega a citas, Solamente vos, Esperanza mía y Las Estrellas.' },
+  'el-dia': { title: '“El fino arte de atar todo con alambre”', description: 'El trabajo de los guionistas de televisión, las diferencias entre la ficción diaria y las producciones para plataformas como Netflix, y la experiencia de Marta en Las Estrellas y Edha.' },
+  'pagina12-novicia': { title: '“Una vocación más fuerte que la de la Novicia Rebelde”', description: 'Su recorrido profesional, su formación en Letras y su trabajo en Ciega a citas. Es un perfil que permite conocer su trayectoria y su manera de trabajar con los equipos de guion.' },
+} satisfies Record<string, PressText>
+
+export type PressId = keyof typeof pressTexts
 
 export const es = {
   nav: {
@@ -69,6 +84,8 @@ export const es = {
     awards: 'Premios',
     contact: 'Contacto',
     language: 'Idioma',
+    darkMode: 'Activar modo oscuro',
+    lightMode: 'Activar modo claro',
   },
 
   subtitle: 'Autora, Guionista, Dramaturga',
@@ -96,6 +113,10 @@ export const es = {
       podcast: 'Podcast',
     },
     items: projectItems as Record<ProjectSlug, ProjectText>,
+  },
+
+  press: {
+    items: pressTexts as Record<PressId, PressText>,
   },
 
   contact: {
