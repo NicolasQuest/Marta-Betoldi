@@ -3,7 +3,6 @@ import { useLanguage, type Lang } from '../i18n/LanguageContext'
 // Rutas de cada página; no se traducen, solo cambia el texto del link.
 // TODO: con el router, cambiar <a href> por <Link to> / <NavLink to>
 export const sections = [
-  { key: 'bio', href: '/' },
   { key: 'projects', href: '/proyectos' },
   { key: 'press', href: '/prensa' },
   { key: 'awards', href: '/premios' },
@@ -16,10 +15,12 @@ const languages: { code: Lang; label: string; name: string }[] = [
   { code: 'en', label: 'EN', name: 'English' },
 ]
 
-// Bio ('/') solo cuando la URL es exactamente '/'; el resto también en sus subpáginas
-// (/proyectos/edha marca Proyectos). Provisional hasta el router.
+// Página activa, también en sus subpáginas (/proyectos/edha marca Proyectos).
+// Provisional hasta el router.
+const currentPath = () => window.location.pathname.replace(/\/+$/, '') || '/'
+
 function isActive(href: string) {
-  const path = window.location.pathname.replace(/\/+$/, '') || '/'
+  const path = currentPath()
   return href === '/' ? path === '/' : path === href || path.startsWith(`${href}/`)
 }
 
@@ -29,7 +30,10 @@ export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg fixed-top locura navbar-padded">
       <div className="container d-flex justify-content-between align-items-center">
-        <a className="navbar-brand" href="/">Marta Betoldi</a>
+        {/* El nombre es el link a Bio (home). TODO: con el router, <Link to="/"> */}
+        <a className="navbar-brand" href="/" aria-current={isActive('/') ? 'page' : undefined}>
+          Marta Betoldi
+        </a>
 
         <button
           className="navbar-toggler"
@@ -49,7 +53,7 @@ export default function Navbar() {
               const active = isActive(s.href)
               return (
                 <li className="nav-item" key={s.key}>
-                  {/* TODO: con el router, <NavLink end={s.href === '/'}> pone el active solo */}
+                  {/* TODO: con el router, <NavLink> pone el active solo */}
                   <a
                     className={`nav-link${active ? ' active' : ''}`}
                     href={s.href}

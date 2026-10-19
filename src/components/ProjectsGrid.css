@@ -1,8 +1,25 @@
+/* Título de cada grupo (Series, Teatro, Podcast) */
+.projectsCategory + .projectsCategory {
+    margin-top: 5vh;
+}
+
+.projectsCategory-title {
+    font-family: helvetica-th;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgb(117, 116, 116);
+    padding-bottom: 8px;
+    border-bottom: 1px solid #d6d6d6;
+    margin-bottom: 0;
+}
+
 .projectsGrid {
-    --cols-max: 5;
+    --cols-max: 4;
     --gap: 24px;
     display: grid;
-    /* Hasta 5 por fila; si no entran con al menos 170px cada una, baja a 4, 3, 2… */
+    /* Hasta 4 por fila; si no entran con al menos 170px cada una, baja a 3, 2… */
     grid-template-columns: repeat(
         auto-fill,
         minmax(max(170px, calc((100% - (var(--cols-max) - 1) * var(--gap)) / var(--cols-max))), 1fr)
@@ -14,22 +31,30 @@
     list-style: none;
 }
 
-/* La card: el póster y, encima, una capa oscura con "Saber más +" que aparece en hover */
+/* La card: un marco 2:3 igual para todas; adentro el póster ENTERO (sin recorte) a su
+   proporción, apoyado abajo. Los pósters van de 0.67 a 0.81 de ancho/alto: los más
+   anchos quedan un poco más bajos en vez de perder los costados. */
 .projectCard {
-    position: relative;
-    display: block;
+    display: flex;
+    align-items: flex-end;
     aspect-ratio: 2 / 3;
-    overflow: hidden;
-    border-radius: 6px;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
     color: white;
     text-decoration: none;
 }
 
-.projectCard img {
+/* El póster en sí: acá van el borde redondeado, la sombra y la capa del hover */
+.projectCard-poster {
+    position: relative;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.projectCard-poster img {
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
 .projectCard-overlay {
@@ -61,6 +86,10 @@
 }
 
 .projectCard:focus-visible {
+    outline: none;
+}
+
+.projectCard:focus-visible .projectCard-poster {
     outline: 2px solid black;
     outline-offset: 4px;
 }
@@ -81,6 +110,19 @@
 
 .projectDetail-text {
     flex: 1;
+}
+
+.projectDetail-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-top: 1.5rem;
+}
+
+.projectDetail-watch {
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 2px;
 }
 
 .projectDetail-genre {

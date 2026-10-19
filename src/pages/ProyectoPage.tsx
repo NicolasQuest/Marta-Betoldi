@@ -29,9 +29,19 @@ export default function ProyectoPage({ slug }: { slug: string }) {
       <div className="projectDetail">
         <img className="projectDetail-poster" src={project.poster} alt={project.title} />
         <div className="projectDetail-text">
-          {genre && <p className="projectDetail-genre">{genre}</p>}
+          {/* Año y, si hay, formato / género: "2018 · Serie / Thriller dramático - Netflix" */}
+          <p className="projectDetail-genre">
+            {[project.year, genre].filter(Boolean).join(' · ')}
+          </p>
           <p className="textoBio">{description}</p>
-          {backLink}
+          <div className="projectDetail-links">
+            {project.link && (
+              <a className="link-vision projectDetail-watch" href={project.link} target="_blank" rel="noreferrer">
+                {t.projects.watch}
+              </a>
+            )}
+            {backLink}
+          </div>
         </div>
       </div>
     </PageSection>

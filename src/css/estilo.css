@@ -143,27 +143,6 @@ li a {
 
 
 
-/* Footer */
-footer {
-
-    margin-top: 20vh;
-    border-top: 1px #b1b0b0 solid;
-    text-align: center;
-    padding-top: 60px;
-}
-
-
-.footerTexto {
-    font-size: 0.5rem;
-    text-align: center;
-}
-
-footer .footerBottom {
-    margin: 30px 0px 20px 10px;
-}
-
-
-
 /* BIO */
 
 
@@ -193,15 +172,18 @@ footer .footerBottom {
     padding-top: 1vh;
 }
 
+/* Foto de Bio: proporción fija 2:3 (la de la foto) para que el recorte no cambie
+   con el tamaño de pantalla; solo se escala. La cara queda centrada arriba. */
 .cajaContenedora1 img {
     margin-top: 13px;
     border-radius: 10px;
+    aspect-ratio: 2 / 3;
+    width: clamp(240px, 25vw, 380px);
+    height: auto;
     object-fit: cover;
-    height: 55dvh;
-    width: 25dvw;
+    object-position: 50% 20%;
     margin-bottom: 4vh;
     filter: brightness(90%);
-    object-position: top;
 }
 
 .cajaContenedora1 img:hover {
@@ -600,10 +582,12 @@ footer .footerBottom {
         padding-top: 5vh;
     }
     
+    /* En una columna: centrada y sin pasarse del ancho de la columna */
     .cajaContenedora1 img {
-
-        height: 55vh;
-        width: 60vw;
+        display: block;
+        width: min(100%, 380px);
+        margin-left: auto;
+        margin-right: auto;
         margin-bottom: 4vh;
     }
 
@@ -791,13 +775,18 @@ footer .footerBottom {
     } 
 */
 
-/* Subtítulo de Bio ("Autora, Guionista, Dramaturga"): 4px más que el estilo base */
-.bioSubtitle .textoSecundario4 {
+/* Título de cada página (Proyectos, Prensa, Premios, Contacto) y subtítulo de Bio:
+   estilo de textoSecundario4 + 4px, centrado. Ver PageTitle.tsx */
+.pageTitle .textoSecundario4 {
     font-size: calc(1.2rem + 4px);
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0 0 1rem;
+    padding: 0;
 }
 
 @media (max-width: 1200px) {
-    .bioSubtitle .textoSecundario4 {
+    .pageTitle .textoSecundario4 {
         font-size: calc(1.4rem + 4px);
     }
 }
