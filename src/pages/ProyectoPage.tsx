@@ -9,9 +9,12 @@ export default function ProyectoPage({ slug }: { slug: string }) {
   const { t } = useLanguage()
   const project = findProject(slug)
 
+  // Vuelve a Proyectos en la pestaña de este proyecto (Series, Teatro o Podcast)
   // TODO: con el router, cambiar los <a href> por <Link to>
   const backLink = (
-    <a className="link-vision" href="/proyectos">{t.projects.back}</a>
+    <a className="link-vision" href={project ? `/proyectos#${project.category}` : '/proyectos'}>
+      {t.projects.back}
+    </a>
   )
 
   if (!project) {

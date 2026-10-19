@@ -1,42 +1,78 @@
-import { categories, projects } from '../data/projects'
+import { useRef, useState, type KeyboardEvent } from 'react'
+import { categories, projects, type ProjectCategory } from '../data/projects'
 import { useLanguage } from '../i18n/LanguageContext'
 import './ProjectsGrid.css'
 
-// Un grid por categoría (Series, Teatro, Podcast), cada una con su título
+// La pestaña activa va en el hash (/proyectos#theater) para que "Volver" desde un
+// proyecto, o un link compartido, abran la misma categoría.
+function categoryFromHash(): ProjectCategory {
+  const hash = window.location.hash.slice(1)
+  return (categories as string[]).includes(hash) ? (hash as ProjectCategory) : categories[0]
+}
+
+// Pestañas Series / Teatro / Podcast: se ve una categoría por vez
 export default function ProjectsGrid() {
   const { t } = useLanguage()
+  const [active, setActive] = useState<ProjectCategory>(categoryFromHash)
+  const tabRefs = useRef<Record<string, HTMLButtonElement | null>>({})
+
+  const select = (category: ProjectCategory) => {
+    setActive(category)
+    history.replaceState(null, '', `#${category}`)
+  }
+
+  // Flechas izquierda/derecha para moverse entre pestañas con teclado
+  const onKeyDown = (e: KeyboardEvent<HTMLDivElement>) => {
+    if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return
+    const i = categories.indexOf(active)
+    const next = categories[(i + (e.key === 'ArrowRight' ? 1 : -1) + categories.length) % categories.length]
+    select(next)
+    tabRefs.current[next]?.focus()
+  }
+
+  const items = projects.filter((p) => p.category === active)
 
   return (
     <>
-      {categories.map((category) => {
-        const items = projects.filter((p) => p.category === category)
-        if (items.length === 0) return null
-
-        return (
-          <section className="projectsCategory" key={category} aria-labelledby={`cat-${category}`}>
-            <h2 className="projectsCategory-title" id={`cat-${category}`}>
+      <div className="projectsTabs" role="tablist" onKeyDown={onKeyDown}>
+        {categories.map((category) => {
+          const selected = category === active
+          return (
+            <button
+              key={category}
+              ref={(el) => { tabRefs.current[category] = el }}
+              type="button"
+              role="tab"
+              id={`tab-${category}`}
+              aria-selected={selected}
+              aria-controls={`panel-${category}`}
+              tabIndex={selected ? 0 : -1}
+              className={`projectsTab${selected ? ' active' : ''}`}
+              onClick={() => select(category)}
+            >
               {t.projects.categories[category]}
-            </h2>
-            <ul className="projectsGrid">
-              {items.map((p) => (
-                <li key={p.slug}>
-                  {/* TODO: con el router, cambiar por <Link to={`/proyectos/${p.slug}`}> */}
-                  <a className="projectCard" href={`/proyectos/${p.slug}`} aria-label={`${p.title}: ${t.projects.learnMore}`}>
-                    <span className="projectCard-poster">
-                      {/* Fondo: el mismo póster ampliado y difuminado, rellena lo que sobra del marco */}
-                      <img className="projectCard-bg" src={p.poster} alt="" aria-hidden="true" loading="lazy" />
-                      <img className="projectCard-img" src={p.poster} alt={p.title} loading="lazy" />
-                      <span className="projectCard-overlay" aria-hidden="true">
-                        <span className="projectCard-cta">{t.projects.learnMore}</span>
-                      </span>
-                    </span>
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </section>
-        )
-      })}
+            </button>
+          )
+        })}
+      </div>
+
+      <div role="tabpanel" id={`panel-${active}`} aria-labelledby={`tab-${active}`}>
+        <ul className="projectsGrid">
+          {items.map((p) => (
+            <li key={p.slug}>
+              {/* TODO: con el router, cambiar por <Link to={`/proyectos/${p.slug}`}> */}
+              <a className="projectCard" href={`/proyectos/${p.slug}`} aria-label={`${p.title}: ${t.projects.learnMore}`}>
+                <span className="projectCard-poster">
+                  <img className="projectCard-img" src={p.poster} alt={p.title} loading="lazy" />
+                  <span className="projectCard-overlay" aria-hidden="true">
+                    <span className="projectCard-cta">{t.projects.learnMore}</span>
+                  </span>
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
     </>
   )
 }
