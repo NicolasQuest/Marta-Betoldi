@@ -117,7 +117,7 @@ export const en: Translations = {
     title: 'Contact',
     email: 'Email',
     agent: 'Management',
-    socials: 'Social',
+    socials: 'Platforms',
     writeEmail: 'Send an email',
   },
 }

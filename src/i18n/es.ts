@@ -137,7 +137,7 @@ export const es = {
     title: 'Contacto',
     email: 'Email',
     agent: 'Representación',
-    socials: 'Redes',
+    socials: 'Plataformas',
     writeEmail: 'Escribir un email',
   },
 }
