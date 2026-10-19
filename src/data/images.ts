@@ -7,8 +7,8 @@ export type Image = {
 
 export const clients: Image[] = [
   { src: '/fotos/Clientes/netflix.png', alt: 'NETFLIX ICONO' },
-  { src: '/fotos/Clientes/Amazon.png', alt: 'AMAZON PRIME ICONO' },
-  { src: '/fotos/Clientes/star +.png', alt: 'STAR PLUS ICONO' },
+  { src: '/fotos/Clientes/prime-video.png', srcDark: '/fotos/Clientes/prime-video-dark.png', alt: 'AMAZON PRIME ICONO' },
+  { src: '/fotos/Clientes/star-plus.png', srcDark: '/fotos/Clientes/star-plus-dark.png', alt: 'STAR PLUS ICONO' },
   { src: '/fotos/Clientes/disney.png', alt: 'DISNEY PLUS ICONO', mono: true },
   { src: '/fotos/Clientes/fox-logo.png', alt: 'FOX + ICONO' },
   { src: '/fotos/Clientes/atresmedia.png', srcDark: '/fotos/Clientes/atresmedia-dark.png', alt: 'ATRES MEDIA ICONO' },
@@ -19,8 +19,8 @@ export const clients: Image[] = [
   { src: '/fotos/Clientes/dori-media.png', alt: 'DORI MEDIA ICONO', mono: true },
   { src: '/fotos/Clientes/el-trece.png', alt: 'EL TRECE ICONO' },
   { src: '/fotos/Clientes/dg-producciones.png', alt: 'DG ICONO' },
-  { src: '/fotos/Clientes/television-publica-argentina-logo-ED8C948CF8-seeklogo.com.png', alt: 'TV PUBLICA ICONO' },
+  { src: '/fotos/Clientes/tv-publica.png', srcDark: '/fotos/Clientes/tv-publica-dark.png', alt: 'TV PUBLICA ICONO' },
   { src: '/fotos/Clientes/flow.png', alt: 'Flow' },
-  { src: '/fotos/Clientes/GOODMOOD.png', alt: 'GOOD MOON ICONO' },
+  { src: '/fotos/Clientes/good-mood.png', alt: 'GOOD MOOD ICONO' },
   { src: '/fotos/Clientes/pegsa-logo.png', alt: 'Pegsa Group Icono', mono: true },
 ]
