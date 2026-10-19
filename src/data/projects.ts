@@ -25,7 +25,7 @@ export const projects: Project[] = [
   { slug: 'las-estrellas', title: 'Las Estrellas', category: 'series', year: '2017', poster: '/fotos/Posters/Las_Estrellas_Serie_de_TV_978804109_large.jpg', link: 'https://www.eltrecetv.com.ar/las-estrellas/capitulos/' },
   { slug: 'esperanza-mia', title: 'Esperanza Mía', category: 'series', year: '2015-2016', poster: '/fotos/Posters/esperanza mia.jpeg', link: 'https://www.primevideo.com/detail/0RIHGM4TH48O051MZSE9UQM1GE' },
   { slug: 'solamente-vos', title: 'Solamente Vos', category: 'series', year: '2013-2014', poster: '/fotos/Posters/Solamente_vos_Serie_de_TV-675101318-large.jpg', link: 'https://www.eltrecetv.com.ar/solamente-vos/' },
-  { slug: 'cuando-me-sonreis', title: 'Cuando me Sonreís', category: 'series', year: '2011', poster: '/fotos/Posters/cuando me sonreis.webp' },
+  { slug: 'cuando-me-sonreis', title: 'Cuando me Sonreís', category: 'series', year: '2011', poster: '/fotos/Posters/cuando-me-sonreis.jpg' },
   { slug: 'ciega-a-citas', title: 'Ciega a Citas', category: 'series', year: '2009', poster: '/fotos/Posters/Ciega_a_citas_Serie.jpeg' },
   { slug: 'socias', title: 'Socias', category: 'series', year: '2008', poster: '/fotos/Posters/socias-poster.jpg', link: 'https://www.eltrecetv.com.ar/socias/capitulos/' },
 

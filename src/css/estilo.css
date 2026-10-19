@@ -157,6 +157,10 @@ li a {
     font-weight: 300;
     font-family: helvetica-th;
     text-align: justify;
+    /* Con justificado, cortar palabras con guion evita los huecos grandes entre
+       palabras. Usa el idioma de <html lang>, que cambia con ES/EN. */
+    hyphens: auto;
+    -webkit-hyphens: auto;
 }
 
 #tituloBio {
@@ -567,10 +571,6 @@ li a {
 
 
 
-    .textoBio {
-        text-align: left;
-    }
-
     .cajaContenedora1,
     .cajaContenedora2 {
         display: grid;
@@ -843,5 +843,29 @@ li a {
     .langSwitch-item:last-child .nav-link,
     .themeToggle .nav-link {
         padding-right: 0;
+    }
+}
+
+/* Bio en escritorio: la foto flota a la izquierda y el texto la rodea; cuando la foto
+   termina, el texto sigue debajo a todo el ancho. (≤1200px va foto arriba, texto abajo) */
+@media (min-width: 1201px) {
+    .cajaContenedora1 {
+        display: flow-root;
+    }
+
+    .cajaContenedora1 #bio {
+        float: left;
+        margin-right: 36px;
+    }
+
+    .cajaContenedora1 .cajaItemTres {
+        padding-left: 0;
+    }
+}
+
+/* Bio en móvil: los 20vw de margen dejaban el texto en una columna de ~200px */
+@media (max-width: 767px) {
+    .cajaContenedora1 {
+        margin: 0 16px;
     }
 }

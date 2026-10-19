@@ -39,6 +39,9 @@
     font-weight: 300;
     line-height: 1.6;
     margin-bottom: 0.9rem;
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
 }
 
 .pressItem-link {
