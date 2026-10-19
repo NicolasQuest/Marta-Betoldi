@@ -1,22 +1,23 @@
-/* Prensa: lista de notas, mismo lenguaje visual que el detalle de proyecto */
-.pressList {
+/* Listas de Prensa y Premios: meta chica en gris, título, descripción y link.
+   Mismo lenguaje visual que el detalle de proyecto. */
+.entryList {
     list-style: none;
     padding: 0;
     margin: 2vh auto 6vh;
     max-width: 760px;
 }
 
-.pressItem {
+.entry {
     padding: 28px 0;
     border-bottom: 1px solid var(--color-border);
 }
 
-.pressItem:first-child {
+.entry:first-child {
     border-top: 1px solid var(--color-border);
 }
 
 /* "PÁGINA/12 · 28 DE JULIO DE 2023": igual que el año/género en Proyectos */
-.pressItem-meta {
+.entry-meta {
     font-size: 0.85rem;
     letter-spacing: 0.06em;
     text-transform: uppercase;
@@ -24,7 +25,7 @@
     margin-bottom: 0.6rem;
 }
 
-.pressItem-title {
+.entry-title {
     font-family: helvetica-th;
     font-size: 1.35rem;
     font-weight: 400;
@@ -33,7 +34,7 @@
     margin-bottom: 0.6rem;
 }
 
-.pressItem-description {
+.entry-description {
     font-family: helvetica-th;
     font-size: 1.05rem;
     font-weight: 300;
@@ -44,17 +45,18 @@
     -webkit-hyphens: auto;
 }
 
-.pressItem-link {
+.entry-link {
     border-bottom: 1px solid currentColor;
     padding-bottom: 2px;
 }
 
 @media (max-width: 767px) {
-    #prensa {
+    #prensa,
+    #premios {
         margin: 2vh 16px;
     }
 
-    .pressItem-title {
+    .entry-title {
         font-size: 1.15rem;
     }
 }

@@ -14,6 +14,7 @@ export const pressItems: PressItem[] = [
   { id: 'pagina12-podcast', outlet: 'Página/12', date: '2023-07-28', url: 'https://www.pagina12.com.ar/571854-actuar-y-escribir-en-la-era-de-los-podcast/' },
   { id: 'fuera-de-libreto', outlet: 'Apple Podcasts', date: '2018', url: 'https://podcasts.apple.com/ar/podcast/6-marta-betoldi-fuera-de-libreto/id1169739275?i=1000419897232' },
   { id: 'con-la-gente', outlet: 'Con La Gente', date: '2018', url: 'https://conlagentenoticias.com/?p=48761' },
+  { id: 'la-nacion', outlet: 'La Nación', date: '2017-07-06', url: 'https://www.lanacion.com.ar/espectaculos/television/por-que-las-estrellas-gustan-tanto-segun-su-guionista-marta-betoldi-nid2037722/' },
   { id: 'el-dia', outlet: 'El Día', date: '2017-06-18', url: 'https://www.eldia.com/nota/2017-6-18-1-57-54-el-fino-arte-de-atar-todo-con-alambre-espectaculos' },
   { id: 'pagina12-novicia', outlet: 'Página/12', date: '2010-02-05', url: 'https://www.pagina12.com.ar/diario/suplementos/las12/13-5491-2010-02-05.html' },
 ]

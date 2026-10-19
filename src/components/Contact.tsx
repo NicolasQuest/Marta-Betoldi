@@ -16,8 +16,6 @@ export default function Contact() {
     <>
       <PageTitle>{t.contact.title}</PageTitle>
       <section className="contact fadeIn" id="contacto">
-        <p className="contact-intro">{t.contact.intro}</p>
-
         {/* Mismo patrón que Prensa y Proyectos: etiqueta chica en gris + valor */}
         <dl className="contact-list">
           <div className="contact-row">

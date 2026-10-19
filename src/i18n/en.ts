@@ -99,14 +99,22 @@ export const en: Translations = {
       'pagina12-podcast': { title: '“Actuar y escribir en la era de los podcast”', description: 'On the creation of Escribiendo el fin del mundo, the podcast developed for Atresmedia with Nancy Dupláa.' },
       'fuera-de-libreto': { title: 'Fuera de libreto — interview with Malena Solda', description: 'A conversation about the role of screenwriters in Argentine fiction, her career and her move from acting to writing. They also recall sharing the cast of Montaña Rusa and the play Contracciones. About 52 minutes long.' },
       'con-la-gente': { title: '“Los modos que nos tocan en el siglo XXI son femeninos”', description: 'A conversation about her work as a screenwriter and the representation of women in fiction, with references to Socias, Ciega a citas, Solamente vos, Esperanza mía and Las Estrellas.' },
+      'la-nacion': { title: '“Por qué Las Estrellas gustan tanto, según su guionista Marta Betoldi”', description: 'Marta breaks down what made Las Estrellas, the Pol-ka daily series she head-wrote, such a success, and how its story was built.' },
       'el-dia': { title: '“El fino arte de atar todo con alambre”', description: 'On the work of TV screenwriters, the differences between daily fiction and productions for platforms like Netflix, and Marta’s experience on Las Estrellas and Edha.' },
       'pagina12-novicia': { title: '“Una vocación más fuerte que la de la Novicia Rebelde”', description: 'Her career, her background in Literature and her work on Ciega a citas. A profile that offers insight into her path and how she works with writing teams.' },
     },
   },
 
+  awards: {
+    items: {
+      'rose-dor': { title: 'Rose d\'Or Award', description: 'Winner in the Best Soap / Telenovela category for Ciega a citas.' },
+      'martin-fierro': { title: 'Martín Fierro Awards', description: 'Ciega a citas won Best Sitcom (Telecomedia). Marta was part of the series’ writing team. The award went to the production, not to her individually.' },
+      'argentores': { title: 'Argentores Production Award', description: 'She received the award together with Silvina Frejdkes and Adrián Suar for the writing of Socias.' },
+    },
+  },
+
   contact: {
     title: 'Contact',
-    intro: 'For projects, collaborations or press inquiries, reach out directly by email or through my representation.',
     email: 'Email',
     agent: 'Management',
     socials: 'Social',

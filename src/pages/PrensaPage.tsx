@@ -1,7 +1,7 @@
 import PageSection from '../components/PageSection'
 import { pressItems } from '../data/press'
 import { useLanguage, type Lang } from '../i18n/LanguageContext'
-import './PrensaPage.css'
+import '../css/entries.css'
 
 // '2023-07-28' → "28 de julio de 2023" / "July 28, 2023"; '2018' → "2018"
 function formatDate(date: string, lang: Lang) {
@@ -16,18 +16,18 @@ export default function PrensaPage() {
 
   return (
     <PageSection id="prensa" title={t.nav.press}>
-      <ul className="pressList">
+      <ul className="entryList">
         {pressItems.map((item) => {
           const { title, description } = t.press.items[item.id]
           return (
-            <li className="pressItem" key={item.id}>
-              <p className="pressItem-meta">
+            <li className="entry" key={item.id}>
+              <p className="entry-meta">
                 {item.outlet} · {formatDate(item.date, lang)}
               </p>
-              <h2 className="pressItem-title">{title}</h2>
-              <p className="pressItem-description">{description}</p>
+              <h2 className="entry-title">{title}</h2>
+              <p className="entry-description">{description}</p>
               <a
-                className="link-vision pressItem-link"
+                className="link-vision entry-link"
                 href={item.url}
                 target="_blank"
                 rel="noreferrer"

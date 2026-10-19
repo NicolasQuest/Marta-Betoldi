@@ -1,17 +1,8 @@
-/* Contacto: intro + filas "etiqueta / valor" (como Prensa) + botón para escribir */
+/* Contacto: filas "etiqueta / valor" (como Prensa) + botón para escribir */
 .contact {
     width: min(640px, calc(100% - 32px));
     margin: 2vh auto 10vh;
     font-family: helvetica-th;
-}
-
-.contact-intro {
-    font-size: 1.2rem;
-    font-weight: 300;
-    line-height: 1.7;
-    text-align: center;
-    margin: 0 auto 5vh;
-    max-width: 520px;
 }
 
 .contact-list {
@@ -54,8 +45,12 @@
     gap: 8px;
 }
 
+/* Icono del tamaño de las mayúsculas del texto y centrado con ellas (no con la
+   caja de la línea, que lo dejaba más abajo) */
 .contact-socials .fa {
-    font-size: 1.3rem;
+    font-size: 0.95em;
+    line-height: 1;
+    transform: translateY(-0.175em);
 }
 
 /* Botón con borde fino, centrado debajo de la lista */
@@ -81,9 +76,5 @@
     .contact-row {
         grid-template-columns: 1fr;
         gap: 6px;
-    }
-
-    .contact-intro {
-        font-size: 1.05rem;
     }
 }

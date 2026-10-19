@@ -71,11 +71,21 @@ const pressTexts = {
   'pagina12-podcast': { title: '“Actuar y escribir en la era de los podcast”', description: 'La creación de Escribiendo el fin del mundo, el podcast desarrollado para Atresmedia junto a Nancy Dupláa.' },
   'fuera-de-libreto': { title: 'Fuera de libreto — entrevista con Malena Solda', description: 'Una charla sobre el rol de los guionistas en la ficción argentina, su recorrido profesional y el paso de la actuación a la escritura. También recuerdan cuando compartieron elenco en Montaña Rusa y la obra Contracciones. Dura unos 52 minutos.' },
   'con-la-gente': { title: '“Los modos que nos tocan en el siglo XXI son femeninos”', description: 'Una conversación sobre su trabajo como guionista y la representación de las mujeres en la ficción, con referencias a Socias, Ciega a citas, Solamente vos, Esperanza mía y Las Estrellas.' },
+  'la-nacion': { title: '“Por qué Las Estrellas gustan tanto, según su guionista Marta Betoldi”', description: 'Marta analiza las claves del éxito de Las Estrellas, la tira de Pol-ka de la que fue guionista principal, y cómo se construyó su historia.' },
   'el-dia': { title: '“El fino arte de atar todo con alambre”', description: 'El trabajo de los guionistas de televisión, las diferencias entre la ficción diaria y las producciones para plataformas como Netflix, y la experiencia de Marta en Las Estrellas y Edha.' },
   'pagina12-novicia': { title: '“Una vocación más fuerte que la de la Novicia Rebelde”', description: 'Su recorrido profesional, su formación en Letras y su trabajo en Ciega a citas. Es un perfil que permite conocer su trayectoria y su manera de trabajar con los equipos de guion.' },
 } satisfies Record<string, PressText>
 
 export type PressId = keyof typeof pressTexts
+
+// Premios (año y obra en data/awards.ts)
+const awardTexts = {
+  'rose-dor': { title: 'Premio Rose d\'Or', description: 'Ganadora en la categoría Best Soap / Telenovela por Ciega a citas.' },
+  'martin-fierro': { title: 'Premios Martín Fierro', description: 'Ciega a citas ganó como Mejor Telecomedia. Marta formó parte del equipo autoral de la serie. El premio fue para la producción, no para ella individualmente.' },
+  'argentores': { title: 'Premio Argentores a la Producción', description: 'Recibió el reconocimiento junto con Silvina Frejdkes y Adrián Suar por el trabajo autoral en Socias.' },
+} satisfies Record<string, PressText>
+
+export type AwardId = keyof typeof awardTexts
 
 export const es = {
   nav: {
@@ -119,9 +129,12 @@ export const es = {
     items: pressTexts as Record<PressId, PressText>,
   },
 
+  awards: {
+    items: awardTexts as Record<AwardId, PressText>,
+  },
+
   contact: {
     title: 'Contacto',
-    intro: 'Para proyectos, colaboraciones o consultas de prensa, el contacto es directo por email o a través de mi representación.',
     email: 'Email',
     agent: 'Representación',
     socials: 'Redes',
