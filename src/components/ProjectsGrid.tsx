@@ -1,4 +1,4 @@
-import { useRef, useState, type KeyboardEvent } from 'react'
+import { useEffect, useRef, useState, type KeyboardEvent } from 'react'
 import { categories, projects, type ProjectCategory } from '../data/projects'
 import { useLanguage } from '../i18n/LanguageContext'
 import './ProjectsGrid.css'
@@ -15,6 +15,13 @@ export default function ProjectsGrid() {
   const { t } = useLanguage()
   const [active, setActive] = useState<ProjectCategory>(categoryFromHash)
   const tabRefs = useRef<Record<string, HTMLButtonElement | null>>({})
+
+  // Si el hash cambia sin recargar (atrás/adelante, un link a /proyectos#podcast…)
+  useEffect(() => {
+    const onHashChange = () => setActive(categoryFromHash())
+    window.addEventListener('hashchange', onHashChange)
+    return () => window.removeEventListener('hashchange', onHashChange)
+  }, [])
 
   const select = (category: ProjectCategory) => {
     setActive(category)

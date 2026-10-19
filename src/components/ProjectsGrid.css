@@ -1,3 +1,9 @@
+/* Proyectos un poco más ancho que el resto de las páginas (20vw de margen) para que
+   las cards sean más grandes */
+#proyectos {
+    margin: 2vh 15vw;
+}
+
 /* Pestañas Series / Teatro / Podcast */
 .projectsTabs {
     display: flex;
@@ -51,9 +57,10 @@
     list-style: none;
 }
 
-/* La card: todas del mismo tamaño, con la proporción del póster más ancho
-   (Escribiendo el Fin del Mundo, 1496x1840). Los más altos se recortan un poco
-   arriba y abajo, centrados. */
+/* La card: todas del mismo tamaño, proporción 7:10 (0.70). Los pósters van de 0.67
+   a 0.81 de ancho/alto: los angostos (Ciega a Citas, Socias…) entran casi enteros y
+   los más anchos (Escribiendo el Fin del Mundo, Betty, Simplemente Alicia) pierden
+   un poco de los costados, centrados. */
 .projectCard {
     display: block;
     color: white;
@@ -63,7 +70,7 @@
 .projectCard-poster {
     position: relative;
     display: block;
-    aspect-ratio: 1496 / 1840;
+    aspect-ratio: 7 / 10;
     overflow: hidden;
     border-radius: 6px;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
