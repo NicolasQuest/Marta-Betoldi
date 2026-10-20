@@ -1,31 +1,34 @@
 import PageSection from '../components/PageSection'
-import { awards } from '../data/awards'
-import { findProject } from '../data/projects'
+import { awards, nominations, type AwardEntry } from '../data/awards'
 import { useLanguage } from '../i18n/LanguageContext'
 import '../css/entries.css'
 
-// Mismo formato que Prensa, sin link: año · obra, nombre del premio y descripción
+// Dos bloques (Premios / Nominaciones) con el formato de Prensa:
+// "año · obra" en gris, el premio como título y la categoría debajo
 export default function PremiosPage() {
   const { t } = useLanguage()
 
+  const list = (items: AwardEntry[]) => (
+    <ul className="entryList">
+      {items.map((item, i) => (
+        <li className="entry" key={`${item.year}-${item.award}-${item.category ?? i}-${item.work}`}>
+          <p className="entry-meta">
+            {item.year} · {item.work}
+          </p>
+          <h3 className="entry-title">{t.awards.names[item.award]}</h3>
+          {item.category && <p className="entry-description">{t.awards.categories[item.category]}</p>}
+        </li>
+      ))}
+    </ul>
+  )
+
   return (
     <PageSection id="premios" title={t.nav.awards}>
-      <ul className="entryList">
-        {awards.map((award) => {
-          const { title, description } = t.awards.items[award.id]
-          const project = findProject(award.project)
-          return (
-            <li className="entry" key={award.id}>
-              <p className="entry-meta">
-                {award.year}
-                {project && ` · ${project.title}`}
-              </p>
-              <h2 className="entry-title">{title}</h2>
-              <p className="entry-description">{description}</p>
-            </li>
-          )
-        })}
-      </ul>
+      <h2 className="entryGroup-title">{t.awards.winsTitle}</h2>
+      {list(awards)}
+
+      <h2 className="entryGroup-title">{t.awards.nominationsTitle}</h2>
+      {list(nominations)}
     </PageSection>
   )
 }

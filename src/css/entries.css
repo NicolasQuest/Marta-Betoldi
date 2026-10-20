@@ -31,7 +31,10 @@
     font-weight: 400;
     line-height: 1.35;
     color: var(--color-text-strong);
-    margin-bottom: 0.6rem;
+    margin: 0 0 0.6rem;
+    /* explícito: estilo.css tiene un h3 genérico centrado y con padding */
+    text-align: left;
+    padding: 0;
 }
 
 .entry-description {
@@ -59,4 +62,29 @@
     .entry-title {
         font-size: 1.15rem;
     }
+}
+
+/* Subtítulos dentro de una página de entradas (Premios / Nominaciones) */
+.entryGroup-title {
+    max-width: 760px;
+    margin: 5vh auto 0;
+    font-family: helvetica-th;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+}
+
+.entryGroup-title:first-child {
+    margin-top: 2vh;
+}
+
+/* Premios: las entradas no tienen link ni texto largo, van más compactas */
+#premios .entry {
+    padding: 18px 0;
+}
+
+#premios .entryList {
+    margin-top: 1.5vh;
 }

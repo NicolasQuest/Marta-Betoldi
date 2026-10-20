@@ -1,6 +1,5 @@
 // Texto de la página de detalle de cada proyecto
 export type ProjectText = {
-  genre?: string // formato / género, se muestra arriba de la descripción
   description: string
 }
 
@@ -9,11 +8,9 @@ const projectItems = {
     description: 'Socias (2008) es una comedia dramática argentina producida por Pol-ka y protagonizada por Mercedes Morán, Nancy Dupláa y Andrea Pietra. La historia sigue a tres abogadas que comparten un estudio jurídico y enfrentan los desafíos de sus vidas profesionales, familiares y amorosas, mientras construyen una amistad atravesada por distintas experiencias y conflictos.',
   },
   'ciega-a-citas': {
-    genre: 'Telenovela / Comedia romántica',
     description: 'La historia sigue a Lucía González, una mujer de 30 años soltera y con sobrepeso que escucha a su madre apostar que llegará sola a la boda de su hermana menor. Decidida a ganar la apuesta y encontrar el amor, Lucía se impone el desafío de conseguir un novio en 258 días, embarcándose en una disparatada serie de citas a ciegas mientras busca reencontrarse consigo misma y reafirmar su propia identidad.',
   },
   'cuando-me-sonreis': {
-    genre: 'Telenovela / Comedia romántica - Telefe',
     description: 'Protagonizada por Facundo Arana y Natalia Oreiro, la historia sigue a Gastón Murski, un hombre estructurado y obsesionado con el control cuya vida da un giro radical tras ser abandonado por su prometida y recibir la inesperada llegada de su padre ausente y un hijo del que no sabía nada. Su mundo se desordena aún más cuando se enamora de Aurora, una apasionada e impulsiva chef de barrio que llega a enseñarle a soltar los mandatos y reconectarse con los afectos.',
   },
   'solamente-vos': {
@@ -23,15 +20,12 @@ const projectItems = {
     description: 'Esperanza mía (2015-2016) es una comedia romántica argentina producida por Pol-ka y protagonizada por Lali Espósito y Mariano Martínez. La historia sigue a Julia, una joven que llega a Buenos Aires y, para cumplir una misión importante, se refugia en un convento bajo una identidad falsa. Allí conoce a Tomás, un sacerdote con quien surge un amor inesperado. La ficción combina romance, humor, música y conflictos familiares.',
   },
   'las-estrellas': {
-    genre: 'Telenovela / Comedia dramática',
     description: 'La historia sigue a cinco hermanas de personalidades opuestas que, tras la muerte de su padre, deben cumplir con una particular cláusula de su testamento para cobrar una millonaria herencia: administrar con éxito un hotel boutique durante un año entero. Obligadas a convivir y trabajar juntas, las cinco reconstruyen su vínculo familiar mientras atraviesan historias de amor, secretos del pasado y la búsqueda de su propia identidad.',
   },
   'el-host': {
-    genre: 'Serie / Comedia show',
     description: 'Protagonizada por Adrián Suar, Nicolás Vázquez y Martín Bossi, la historia sigue al dueño y director del Hotel Faena, quien atraviesa un dramático desamor tras ser abandonado por su esposa el día de su boda. La trama combina la comedia de enredos con elementos de late night show, sketches, rutinas de stand-up, musicales y participaciones de grandes comediantes e invitados especiales.',
   },
   'edha': {
-    genre: 'Serie / Thriller dramático - Netflix',
     description: 'Protagonizada por Juana Viale, la historia sigue a una exitosa y visionaria diseñadora de moda de Buenos Aires cuya vida y carrera dan un vuelco tras conocer a Teo, un atractivo modelo e inmigrante que busca venganza. La trama combina el glamour de la alta costura con los oscuros secretos de la industria textil, la traición, el deseo y la lucha de clases.',
   },
   'planners': {
@@ -41,7 +35,6 @@ const projectItems = {
     description: 'Betty, la fea: la historia continúa (2024) es una serie colombiana de comedia y drama, secuela de Yo soy Betty, la fea, protagonizada por Ana María Orozco y Jorge Enrique Abello. Veinte años después, Betty enfrenta nuevos desafíos personales y profesionales mientras intenta reconstruir el vínculo con su hija adolescente y atraviesa una crisis en su relación con Armando. La serie retoma la historia de los personajes originales y explora los cambios en sus relaciones y en el mundo empresarial de Ecomoda.',
   },
   'simplemente-alicia': {
-    genre: 'Serie / Comedia dramática - Netflix',
     description: 'La serie sigue la vida de Alicia, una mujer atrapada en un dilema emocional que la lleva a llevar una doble vida sentimental y terminar casada con dos hombres a la vez. Con un tono que combina el humor y el drama, la historia explora la bigamia femenina, los límites del deseo, las contradicciones del amor y el choque entre los mandatos sociales y la libertad personal.',
   },
   'contracciones': {
@@ -54,7 +47,6 @@ const projectItems = {
     description: 'Combina humor, música y emoción para celebrar la vida y las ganas de seguir disfrutando sin importar la edad. Protagonizada por Mamen García, la historia presenta a una mujer que comparte sus experiencias, deseos y sueños pendientes, en un espectáculo que invita a reflexionar sobre el paso del tiempo, la libertad y las segundas oportunidades.',
   },
   'escribiendo-el-fin-del-mundo': {
-    genre: 'Sonora',
     description: 'Protagonizada por Eleonora Wexler y Favio Posca, esta audioserie explora una intrigante historia narrada a través del sonido, el drama y el suspenso. La trama se sumerge en las grietas emocionales, los enigmas y las reflexiones sobre la existencia en un mundo al borde del colapso, aprovechando al máximo el lenguaje inmersivo del podcast de ficción para construir una atmósfera envolvente e íntima.',
   },
 } satisfies Record<string, ProjectText>
@@ -78,14 +70,44 @@ const pressTexts = {
 
 export type PressId = keyof typeof pressTexts
 
-// Premios (año y obra en data/awards.ts)
-const awardTexts = {
-  'rose-dor': { title: 'Premio Rose d\'Or', description: 'Ganadora en la categoría Best Soap / Telenovela por Ciega a citas.' },
-  'martin-fierro': { title: 'Premios Martín Fierro', description: 'Ciega a citas ganó como Mejor Telecomedia. Marta formó parte del equipo autoral de la serie. El premio fue para la producción, no para ella individualmente.' },
-  'argentores': { title: 'Premio Argentores a la Producción', description: 'Recibió el reconocimiento junto con Silvina Frejdkes y Adrián Suar por el trabajo autoral en Socias.' },
-} satisfies Record<string, PressText>
+// Premios: nombres y categorías (año y obra en data/awards.ts)
+const awardNames = {
+  tato: 'Premios Tato',
+  martinFierro: 'Premios Martín Fierro',
+  kidsChoice: 'Kids\' Choice Awards',
+  fundTV: 'Premios FundTV',
+  roseDor: 'Premios Rose d’Or',
+  accolade: 'Premios Accolade',
+  argentores: 'Premios Argentores',
+  clarin: 'Premios Clarín',
+  produ: 'Premios PRODU',
+  indiaCatalina: 'Premios India Catalina',
+  emmy: 'International Emmy Awards',
+}
 
-export type AwardId = keyof typeof awardTexts
+const awardCategories = {
+  dailyComedy: 'Mejor Comedia Diaria',
+  production: 'Premio a la producción',
+  seriesTelenovelas: 'Series y Telenovelas',
+  excellenceFiction: 'Premio a la Excelencia como Mejor Ficción',
+  sitcom: 'Mejor Telecomedia',
+  bestWriter: 'Mejor Autora',
+  writingRecognition: 'Reconocimiento autoral',
+  dramedyScript: 'Guión de Serie Dramedy',
+  romComSeries: 'Serie de Comedia Romántica',
+  familyRomanticDramaScript: 'Guión de Serie de Drama Familiar, Romántico',
+  romDramaSeries: 'Serie de Drama Romántico',
+  fictionScript: 'Mejor Libreto de Ficción',
+  fictionSeries: 'Mejor Serie de Ficción',
+  screenwriter: 'Mejor Guionista',
+  dailyFiction: 'Mejor Ficción Diaria',
+  telenovela: 'Mejor Telenovela',
+  authorScriptwriter: 'Mejor Autor/Libretista',
+  fictionOrWriting: 'Mejor Ficción y/o categoría autoral',
+}
+
+export type AwardName = keyof typeof awardNames
+export type AwardCategory = keyof typeof awardCategories
 
 export const es = {
   nav: {
@@ -107,7 +129,7 @@ export const es = {
       'A lo largo de mi trayectoria, desarrollé y escribí ficciones como Socias, Ciega a citas, Cuando me sonreís, Daños colaterales, Edha, Esperanza mía, Solamente vos, Las Estrellas, El Host II, La Villa y Planners II, entre otras. También incursioné en el podcast con Escribiendo el fin del mundo, una creación para Atresmedia.',
       'Mi trabajo abarca producciones para televisión abierta, plataformas de streaming y productoras de distintos mercados. Entre las empresas y plataformas con las que trabajé se encuentran Pol-ka, Telefe, Canal 13, Televisión Pública, Flow, Netflix, Amazon Prime Video, Disney+, Fox International, Atresmedia, Canal RCN, Dori Media y Good Mood.',
       'Soy creadora de Betty, la fea: la historia continúa, serie derivada de la obra original de Fernando Gaitán, en la que también me desempeñé como guionista principal (headwriter). Asimismo, desarrollé el formato original de Simplemente Alicia para Netflix Global, donde fui guionista principal.',
-      'Actualmente, me desempeño como coordinadora de Desarrollo de Contenidos para Gosua España y ofrezco servicios de consultoría y asesoramiento de guión (script doctoring) para productoras hispanoamericanas. He trabajado en la revisión y el desarrollo de proyectos para distintos mercados, incluyendo Ciega a citas en Shanghái (China), Croton TV, Sony en Hungría, Lituania y Chile, y Socias en Chile. Además, soy miembro del jurado de los Premios Emmy Internacionales.',
+      'Me desempeño como coordinadora de Desarrollo de Contenidos para Gosua España y ofrezco servicios de consultoría y asesoramiento de guión (script doctoring) para productoras hispanoamericanas. He trabajado en la revisión y el desarrollo de proyectos para distintos mercados, incluyendo Ciega a citas en Shanghái (China), Croton TV, Sony en Hungría, Lituania y Chile, y Socias en Chile. Además, soy miembro del jurado de los Premios Emmy Internacionales.',
       'Mi catálogo reúne proyectos de autoría propia y creaciones desarrolladas en colaboración con autores de destacada trayectoria, como David Serrano, Fernando Castets, Julio Rojas, Paula del Fierro y Esteban del Campo.',
     ],
   },
@@ -130,7 +152,10 @@ export const es = {
   },
 
   awards: {
-    items: awardTexts as Record<AwardId, PressText>,
+    winsTitle: 'Premios',
+    nominationsTitle: 'Nominaciones',
+    names: awardNames,
+    categories: awardCategories,
   },
 
   contact: {

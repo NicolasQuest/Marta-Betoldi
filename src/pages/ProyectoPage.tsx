@@ -25,16 +25,16 @@ export default function ProyectoPage() {
     )
   }
 
-  const { genre, description } = t.projects.items[project.slug]
+  const { description } = t.projects.items[project.slug]
 
   return (
     <PageSection id="proyecto" title={project.title}>
       <div className="projectDetail">
         <img className="projectDetail-poster" src={project.poster} alt={project.title} />
         <div className="projectDetail-text">
-          {/* Año y, si hay, formato / género: "2018 · Serie / Thriller dramático - Netflix" */}
+          {/* Año y plataforma, en gris: "2025 · Netflix" */}
           <p className="projectDetail-genre">
-            {[project.year, genre].filter(Boolean).join(' · ')}
+            {project.year} · {project.platform}
           </p>
           <p className="textoBio">{description}</p>
           <div className="projectDetail-links">

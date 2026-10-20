@@ -23,4 +23,5 @@ export const clients: Image[] = [
   { src: '/fotos/Clientes/flow.png', alt: 'Flow' },
   { src: '/fotos/Clientes/good-mood.png', alt: 'GOOD MOOD ICONO' },
   { src: '/fotos/Clientes/pegsa-logo.png', alt: 'Pegsa Group Icono', mono: true },
+  { src: '/fotos/Clientes/fundacion-huesped.png', srcDark: '/fotos/Clientes/fundacion-huesped-dark.png', alt: 'FUNDACION HUESPED ICONO' },
 ]

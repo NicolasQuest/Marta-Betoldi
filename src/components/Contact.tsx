@@ -3,6 +3,7 @@ import { useLanguage } from '../i18n/LanguageContext'
 import './Contact.css'
 
 const EMAIL = 'martabetoldi@gmail.com'
+const AGENT_EMAIL = 'victor@vision-la.com'
 
 const socials = [
   { href: 'https://www.instagram.com/martabetoldi/?hl=es', icon: 'fa-instagram', label: 'Instagram' },
@@ -26,10 +27,11 @@ export default function Contact() {
           </div>
           <div className="contact-row">
             <dt>{t.contact.agent}</dt>
-            <dd>
+            <dd className="contact-stack">
               <a className="link-vision" href="https://www.vision-la.com/" target="_blank" rel="noreferrer">
                 Vision Entertainment
               </a>
+              <a className="link-vision" href={`mailto:${AGENT_EMAIL}`}>{AGENT_EMAIL}</a>
             </dd>
           </div>
           <div className="contact-row">

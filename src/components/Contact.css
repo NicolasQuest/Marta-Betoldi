@@ -33,6 +33,14 @@
     font-size: 1.2rem;
 }
 
+/* Representación: agencia y, debajo, el email del representante */
+.contact-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+}
+
 .contact-socials {
     display: flex;
     flex-wrap: wrap;
