@@ -4,7 +4,7 @@ import { useLanguage } from '../i18n/LanguageContext'
 import '../css/entries.css'
 
 // Dos bloques (Premios / Nominaciones) con el formato de Prensa:
-// "año · obra" en gris, el premio como título y la categoría debajo
+// "año · obra" en gris y, debajo, premio — categoría en una sola línea
 export default function PremiosPage() {
   const { t } = useLanguage()
 
@@ -15,8 +15,11 @@ export default function PremiosPage() {
           <p className="entry-meta">
             {item.year} · {item.work}
           </p>
-          <h3 className="entry-title">{t.awards.names[item.award]}</h3>
-          {item.category && <p className="entry-description">{t.awards.categories[item.category]}</p>}
+          {/* Premio y categoría en una sola línea: "Premios Tato — Mejor Comedia Diaria" */}
+          <h3 className="entry-title award-line">
+            {t.awards.names[item.award]}
+            {item.category && <span className="award-category"> — {t.awards.categories[item.category]}</span>}
+          </h3>
         </li>
       ))}
     </ul>
