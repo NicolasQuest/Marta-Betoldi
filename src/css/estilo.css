@@ -5,6 +5,13 @@
     src: url(../font/HelveticaNeueLTStd-Th.otf);
 }
 
+/* Peso normal (Roman) de la misma familia: se usa como "negrita" sobre el Thin,
+   que no tiene negrita propia y el navegador no la puede simular bien */
+@font-face {
+    font-family: helvetica-roman;
+    src: url(../font/HelveticaNeueLTStd-Roman.otf);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -150,6 +157,12 @@ li a {
     display: flex;
     margin: 0vh 20vw;
     border-bottom: var(--color-line) solid 1px;
+}
+
+/* Negritas de la bio (RichText → <strong>) */
+.textoBio strong {
+    font-family: helvetica-roman;
+    font-weight: 400;
 }
 
 .textoBio {
