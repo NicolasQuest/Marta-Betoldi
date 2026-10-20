@@ -1,4 +1,5 @@
 import { useLanguage } from '../i18n/LanguageContext'
+import RichText from './RichText'
 
 export default function Bio() {
   const { t } = useLanguage()
@@ -12,7 +13,9 @@ export default function Bio() {
       </div>
       <div className="cajaItemTres">
         {t.bio.paragraphs.map((p) => (
-          <p className="textoBio" key={p}>{p}</p>
+          <p className="textoBio" key={p}>
+            <RichText text={p} />
+          </p>
         ))}
       </div>
     </main>
