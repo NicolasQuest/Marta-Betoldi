@@ -88,6 +88,7 @@ export const en: Translations = {
 
   press: {
     items: {
+      'articulo14-alicia': { title: '“El nuevo fenómeno de Netflix es una telenovela colombiana sobre una mujer casada con dos hombres”', description: '\'Simplemente Alicia\', Netflix’s new Colombian series, becomes a hit with its provocative story of double lives.' },
       'produ-primetime': { title: 'PRODU primetime — interview with Ríchard Izarra', description: 'Marta talks about building female characters, her work on Betty la Fea: The Story Continues and her catalog of projects.' },
       'produ-catalogo': { title: '“Escritora Marta Betoldi con un catálogo de buenas historias femeninas que ella misma pitchea”', description: 'An overview of her career as a screenwriter, her take on female characters and her work on Betty la Fea: The Story Continues.' },
       'pagina12-podcast': { title: '“Actuar y escribir en la era de los podcast”', description: 'On the creation of Escribiendo el fin del mundo, the podcast developed for Atresmedia with Nancy Dupláa.' },
@@ -95,6 +96,7 @@ export const en: Translations = {
       'con-la-gente': { title: '“Los modos que nos tocan en el siglo XXI son femeninos”', description: 'A conversation about her work as a screenwriter and the representation of women in fiction, with references to Socias, Ciega a citas, Solamente vos, Esperanza mía and Las Estrellas.' },
       'la-nacion': { title: '“Por qué Las Estrellas gustan tanto, según su guionista Marta Betoldi”', description: 'Marta breaks down what made Las Estrellas, the Pol-ka daily series she head-wrote, such a success, and how its story was built.' },
       'el-dia': { title: '“El fino arte de atar todo con alambre”', description: 'On the work of TV screenwriters, the differences between daily fiction and productions for platforms like Netflix, and Marta’s experience on Las Estrellas and Edha.' },
+      'la-once-diez': { title: 'Viernes Espectáculos — interview with Pablo Gorlero', description: 'In the "Viernes Espectáculos" special, Pablo Gorlero interviews Marta Betoldi about her work as a screenwriter, writer and producer.' },
       'pagina12-novicia': { title: '“Una vocación más fuerte que la de la Novicia Rebelde”', description: 'Her career, her background in Literature and her work on Ciega a citas. A profile that offers insight into her path and how she works with writing teams.' },
     },
   },

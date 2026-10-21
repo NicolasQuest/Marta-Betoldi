@@ -58,6 +58,7 @@ export type ProjectSlug = keyof typeof projectItems
 export type PressText = { title: string; description: string }
 
 const pressTexts = {
+  'articulo14-alicia': { title: '“El nuevo fenómeno de Netflix es una telenovela colombiana sobre una mujer casada con dos hombres”', description: '\'Simplemente Alicia\', la nueva serie colombiana de Netflix, se convierte en un fenómeno con su historia provocadora de dobles vidas.' },
   'produ-primetime': { title: 'PRODU primetime — entrevista con Ríchard Izarra', description: 'Marta habla sobre la construcción de personajes femeninos, su trabajo en Betty, la fea: la historia continúa y su catálogo de proyectos.' },
   'produ-catalogo': { title: '“Escritora Marta Betoldi con un catálogo de buenas historias femeninas que ella misma pitchea”', description: 'Repasa su recorrido como guionista, su mirada sobre los personajes femeninos y su trabajo en Betty, la fea: la historia continúa.' },
   'pagina12-podcast': { title: '“Actuar y escribir en la era de los podcast”', description: 'La creación de Escribiendo el fin del mundo, el podcast desarrollado para Atresmedia junto a Nancy Dupláa.' },
@@ -65,6 +66,7 @@ const pressTexts = {
   'con-la-gente': { title: '“Los modos que nos tocan en el siglo XXI son femeninos”', description: 'Una conversación sobre su trabajo como guionista y la representación de las mujeres en la ficción, con referencias a Socias, Ciega a citas, Solamente vos, Esperanza mía y Las Estrellas.' },
   'la-nacion': { title: '“Por qué Las Estrellas gustan tanto, según su guionista Marta Betoldi”', description: 'Marta analiza las claves del éxito de Las Estrellas, la tira de Pol-ka de la que fue guionista principal, y cómo se construyó su historia.' },
   'el-dia': { title: '“El fino arte de atar todo con alambre”', description: 'El trabajo de los guionistas de televisión, las diferencias entre la ficción diaria y las producciones para plataformas como Netflix, y la experiencia de Marta en Las Estrellas y Edha.' },
+  'la-once-diez': { title: 'Viernes Espectáculos — entrevista con Pablo Gorlero', description: 'En el especial "Viernes Espectáculos", Pablo Gorlero entrevista a Marta Betoldi para charlar de su rol de guionista, escritora y productora.' },
   'pagina12-novicia': { title: '“Una vocación más fuerte que la de la Novicia Rebelde”', description: 'Su recorrido profesional, su formación en Letras y su trabajo en Ciega a citas. Es un perfil que permite conocer su trayectoria y su manera de trabajar con los equipos de guion.' },
 } satisfies Record<string, PressText>
 
