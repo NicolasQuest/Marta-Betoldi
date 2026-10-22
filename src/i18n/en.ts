@@ -171,6 +171,7 @@ export const en: Translations = {
     title: 'Contact',
     email: 'Email',
     agent: 'Management',
+    press: 'Communications & press',
     socials: 'Platforms',
     writeEmail: 'Send an email',
   },

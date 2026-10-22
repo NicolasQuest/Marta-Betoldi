@@ -4,6 +4,7 @@ import './Contact.css'
 
 const EMAIL = 'martabetoldi@gmail.com'
 const AGENT_EMAIL = 'victor@vision-la.com'
+const PRESS_EMAIL = 'lumimiceli@gmail.com'
 
 const socials = [
   { href: 'https://www.instagram.com/martabetoldi/?hl=es', icon: 'fa-instagram', label: 'Instagram' },
@@ -32,6 +33,13 @@ export default function Contact() {
                 Vision Entertainment
               </a>
               <a className="link-vision" href={`mailto:${AGENT_EMAIL}`}>{AGENT_EMAIL}</a>
+            </dd>
+          </div>
+          <div className="contact-row">
+            <dt>{t.contact.press}</dt>
+            <dd className="contact-stack">
+              <span>Lucia Miceli</span>
+              <a className="link-vision" href={`mailto:${PRESS_EMAIL}`}>{PRESS_EMAIL}</a>
             </dd>
           </div>
           <div className="contact-row">

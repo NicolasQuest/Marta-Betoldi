@@ -193,6 +193,7 @@ export const es = {
     title: 'Contacto',
     email: 'Email',
     agent: 'Representación',
+    press: 'Comunicación y prensa',
     socials: 'Plataformas',
     writeEmail: 'Escribir un email',
   },
