@@ -163,6 +163,7 @@ export const es = {
     trailer: 'Tráiler',
     teaser: 'Teaser',
     play: 'Reproducir',
+    watchOnYoutube: 'Ver en YouTube →',
     categories: {
       series: 'Series',
       theater: 'Teatro',

@@ -3,8 +3,10 @@ import './YouTubeEmbed.css'
 
 type Props = {
   url: string // https://www.youtube.com/watch?v=ID
+  heading: string // "Tráiler" / "Teaser": título de la sección
   title: string // para el iframe y el botón (accesibilidad)
   playLabel: string // "Reproducir" / "Play"
+  youtubeLabel: string // "Ver en YouTube →", si no se puede embeber
 }
 
 const videoId = (url: string) => new URL(url).searchParams.get('v') ?? ''
@@ -24,20 +26,30 @@ const PLAYER_PARAMS = new URLSearchParams({
   enablejsapi: '1',
 }).toString()
 
+// Cada video se chequea solo; si falla uno, los demás siguen igual:
+//   'ok'       → miniatura con play; al hacer clic, el reproductor
+//   'missing'  → el video no existe o es privado: no se muestra la sección
+//   'blocked'  → existe pero no permite embeberse: link para verlo en YouTube
+type Status = 'ok' | 'missing' | 'blocked'
+
+// YouTube no da error si falta una miniatura: devuelve un placeholder gris de 120x90
+const isPlaceholder = (img: HTMLImageElement) => img.naturalWidth <= 120
+
 // Muestra la miniatura con un botón de play; el reproductor de YouTube (~1 MB de
 // scripts) recién se carga al hacer clic. Usa youtube-nocookie: sin cookies hasta reproducir.
-export default function YouTubeEmbed({ url, title, playLabel }: Props) {
+export default function YouTubeEmbed({ url, heading, title, playLabel, youtubeLabel }: Props) {
   const id = videoId(url)
+  const [status, setStatus] = useState<Status>('ok')
   const [playing, setPlaying] = useState(false)
-  // No todos los videos tienen miniatura en alta (maxres); si falla, la estándar
-  const [thumb, setThumb] = useState(`https://i.ytimg.com/vi/${id}/maxresdefault.jpg`)
-  const showFallback = () => setThumb(`https://i.ytimg.com/vi/${id}/hqdefault.jpg`)
+  // Primero la miniatura en alta (maxres); no todos los videos la tienen → la estándar (hq)
+  const [thumb, setThumb] = useState<'maxres' | 'hq'>('maxres')
   const iframeRef = useRef<HTMLIFrameElement>(null)
 
-  // Al terminar el video volvemos a la miniatura, así no aparece la grilla de
-  // "videos relacionados" que YouTube muestra al final (no se puede desactivar).
-  // Protocolo de la API de iframe de YouTube: le mandamos "listening" (repetido hasta
-  // que el reproductor esté listo y conteste) y nos avisa cada cambio de estado.
+  // Si falla la miniatura en alta probamos la estándar; si también falla, el video ya no está
+  const onThumbFailed = () => (thumb === 'maxres' ? setThumb('hq') : setStatus('missing'))
+
+  // Mensajes del reproductor (API de iframe de YouTube): le mandamos "listening",
+  // repetido hasta que esté listo, y nos avisa cambios de estado y errores.
   useEffect(() => {
     if (!playing) return
     let answered = false
@@ -50,7 +62,13 @@ export default function YouTubeEmbed({ url, title, playLabel }: Props) {
       answered = true
       try {
         const data = typeof e.data === 'string' ? JSON.parse(e.data) : e.data
-        if (data?.info?.playerState === 0) setPlaying(false) // 0 = terminó
+        // Al terminar volvemos a la miniatura: así no aparece la grilla de "relacionados"
+        if (data?.info?.playerState === 0) setPlaying(false)
+        // Errores: 100 = no existe / privado; 101 y 150 = no permite embeberse
+        if (data?.event === 'onError') {
+          setPlaying(false)
+          setStatus(data.info === 100 ? 'missing' : 'blocked')
+        }
       } catch {
         // mensajes que no son JSON: se ignoran
       }
@@ -62,35 +80,45 @@ export default function YouTubeEmbed({ url, title, playLabel }: Props) {
     }
   }, [playing, id])
 
+  if (status === 'missing') return null
+
   return (
-    <div className="ytEmbed">
-      {playing ? (
-        <iframe
-          ref={iframeRef}
-          src={`https://www.youtube-nocookie.com/embed/${id}?${PLAYER_PARAMS}`}
-          title={title}
-          allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-          allowFullScreen
-        />
+    <section className="projectTrailer">
+      <h2 className="projectTrailer-title">{heading}</h2>
+
+      {status === 'blocked' ? (
+        <a className="link-vision projectDetail-watch" href={url} target="_blank" rel="noreferrer">
+          {youtubeLabel}
+        </a>
       ) : (
-        <button type="button" className="ytEmbed-facade" onClick={() => setPlaying(true)} aria-label={`${playLabel}: ${title}`}>
-          <img
-            src={thumb}
-            alt=""
-            loading="lazy"
-            onError={showFallback}
-            // YouTube no da error si falta la miniatura en alta: devuelve un placeholder de 120x90
-            onLoad={(e) => {
-              if (e.currentTarget.naturalWidth <= 120) showFallback()
-            }}
-          />
-          <span className="ytEmbed-play" aria-hidden="true">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
-              <path d="M8 5.5v13l11-6.5z" />
-            </svg>
-          </span>
-        </button>
+        <div className="ytEmbed">
+          {playing ? (
+            <iframe
+              ref={iframeRef}
+              src={`https://www.youtube-nocookie.com/embed/${id}?${PLAYER_PARAMS}`}
+              title={title}
+              allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+              allowFullScreen
+            />
+          ) : (
+            <button type="button" className="ytEmbed-facade" onClick={() => setPlaying(true)} aria-label={`${playLabel}: ${title}`}>
+              <img
+                key={thumb}
+                src={`https://i.ytimg.com/vi/${id}/${thumb}default.jpg`}
+                alt=""
+                loading="lazy"
+                onError={onThumbFailed}
+                onLoad={(e) => isPlaceholder(e.currentTarget) && onThumbFailed()}
+              />
+              <span className="ytEmbed-play" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                  <path d="M8 5.5v13l11-6.5z" />
+                </svg>
+              </span>
+            </button>
+          )}
+        </div>
       )}
-    </div>
+    </section>
   )
 }

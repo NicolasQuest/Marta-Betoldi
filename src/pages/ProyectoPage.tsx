@@ -51,13 +51,18 @@ export default function ProyectoPage() {
       </div>
 
       {/* Tráiler / teaser abajo de todo, embebido de YouTube (carga al hacer clic) */}
+      {/* Cada video se chequea por separado: si uno falla, solo ese se oculta */}
       {trailers.map((tr) => {
         const label = tr.kind === 'teaser' ? t.projects.teaser : t.projects.trailer
         return (
-          <section className="projectTrailer" key={tr.url}>
-            <h2 className="projectTrailer-title">{label}</h2>
-            <YouTubeEmbed url={tr.url} title={`${label} · ${project.title}`} playLabel={t.projects.play} />
-          </section>
+          <YouTubeEmbed
+            key={tr.url}
+            url={tr.url}
+            heading={label}
+            title={`${label} · ${project.title}`}
+            playLabel={t.projects.play}
+            youtubeLabel={t.projects.watchOnYoutube}
+          />
         )
       })}
     </PageSection>

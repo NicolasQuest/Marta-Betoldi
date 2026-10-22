@@ -36,6 +36,7 @@ export const en: Translations = {
     trailer: 'Trailer',
     teaser: 'Teaser',
     play: 'Play',
+    watchOnYoutube: 'Watch on YouTube →',
     categories: {
       series: 'Series',
       theater: 'Theater',
