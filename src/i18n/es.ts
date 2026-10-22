@@ -40,17 +40,20 @@ const projectItems = {
   'simplemente-alicia': {
     description: 'La serie sigue la vida de Alicia, una mujer atrapada en un dilema emocional que la lleva a tener una doble vida sentimental y terminar casada con dos hombres a la vez. Con un tono que combina el humor y el drama, la historia explora la bigamia femenina, los límites del deseo, las contradicciones del amor y el choque entre los mandatos sociales y la libertad personal.',
   },
-  'el-relato-de-la-esposa-del-alergologo': {
-    description: 'Adaptación teatral.',
+  'el-cuento-de-la-mujer-del-alergista': {
+    description: 'Adaptación teatral de la obra del dramaturgo estadounidense Charles Busch, estrenada en el Multiteatro de Buenos Aires.',
   },
-  'loca-feliz-muy-loca': {
-    description: 'Adaptación teatral.',
+  'locos-de-contento': {
+    description: 'Adaptación teatral de la obra de Jacobo Langsner en una versión libre. La obra se presentó en Buenos Aires y realizó temporada en Mar del Plata.',
   },
   'extras': {
-    description: 'Obra teatral escrita por Marta, en Estados Unidos.',
+    description: 'Obra teatral escrita por Marta Betoldi, distinguida con el Premio Municipal de Teatro en la categoría Ópera Prima. Se estrenó en Buenos Aires.',
+  },
+  'recalculando': {
+    description: 'El programa Recalculando, conducido por Marta Betoldi, se emitió durante el año 2015 los domingos en la AM 1110. Un ciclo de entrevistas y charlas con diversas personalidades del ámbito cultural, artístico y musical.',
   },
   'contracciones': {
-    description: 'Estrenada en el marco de TeatroxlaIdentidad, la obra entrelaza los monólogos de dos mujeres en dos momentos diferentes unidas por el proceso de gestar. A través de un cruce íntimo y conmovedor, explora la maternidad, la memoria, la verdad oculta de las madres argentinas y la búsqueda de la identidad.',
+    description: 'Estrenada en el marco de TeatroxlaIdentidad, la obra entrelaza los monólogos de dos mujeres en dos momentos diferentes unidas por el proceso de gestar. A través de un cruce íntimo y conmovedor, explora la maternidad, la memoria, la verdad oculta de las madres argentinas y la búsqueda de la identidad. La obra realizó giras por Argentina y España, y se presentó en ciudades como Londres, Miami, Ciudad de México, París, Lille y Madrid. Fue traducida al italiano, inglés y francés.',
   },
   'las-gratitudes': {
     description: 'Las gratitudes (2026) es una obra teatral basada en la novela homónima de la escritora francesa Delphine de Vigan. La historia sigue a Michka, una mujer mayor que comienza a perder la capacidad de hablar y emprende la búsqueda de las personas que la ayudaron durante su infancia para poder agradecerles. A través de una historia íntima y emotiva, la obra reflexiona sobre la memoria, los vínculos humanos y la importancia de expresar gratitud.',
@@ -107,6 +110,7 @@ const awardNames = {
 const awardCategories = {
   dailyComedy: 'Mejor Comedia Diaria',
   production: 'Premio a la producción',
+  bestProduction: 'Mejor Producción',
   seriesTelenovelas: 'Series y Telenovelas',
   excellenceFiction: 'Premio a la Excelencia como Mejor Ficción',
   sitcom: 'Mejor Telecomedia',
@@ -145,13 +149,13 @@ export const es = {
     photoAlt: 'Foto Marta Betoldi',
     // Formato: **negrita**, *itálica*, ***negrita e itálica*** (ver RichText.tsx)
     paragraphs: [
-      'Soy **guionista, dramaturga y actriz argentina**, licenciada en Letras por la **Universidad de Buenos Aires (UBA)** y egresada de Dramaturgia de la **Escuela Metropolitana de Arte Dramático (EMAD)**. Resido en Madrid y completé mi formación en guión con referentes como **John Truby, Robert McKee y Linda Seger**, además de participar en talleres con **Juan Campanella y Aída Bortnik**.',
+      'Soy **guionista, dramaturga y actriz argentina**, licenciada en Letras egresada de la **Universidad de Buenos Aires (UBA)** y egresada de Dramaturgia de la **Escuela Metropolitana de Arte Dramático (EMAD)**. Resido en Madrid y completé mi formación en guión con referentes como **John Truby, Robert McKee y Linda Seger**, además de participar en talleres con **Juan Campanella y Aída Bortnik**.',
       'A lo largo de mi trayectoria, desarrollé y escribí ficciones como *Socias*, *Ciega a citas*, *Cuando me sonreís*, *Daños Colaterales*, *Edha*, *Esperanza mía*, *Solamente Vos*, *Las Estrellas*, *El Host II* y *Planners II*, entre otras. También incursioné en el podcast con "*Escribiendo el fin del mundo*", una creación para **Atresmedia**.',
       'Mi trabajo abarca producciones para televisión abierta, plataformas de streaming y productoras de distintos mercados. Entre las empresas y plataformas con las que trabajé se encuentran Pol-ka, Telefe, Canal 13, Televisión Pública, Flow, Netflix, Amazon Prime Video, Disney+, Fox International, Canal RCN, Dori Media y Good Mood.',
-      'Soy **creadora de** ***Betty, la fea: la historia continúa***, serie derivada de la obra original de Fernando Gaitán, en la que también me desempeñé como **guionista principal**. Asimismo, desarrollé el **formato original de *Simplemente Alicia* para Netflix Global**, donde fui guionista principal.',
+      'Soy **creadora de** ***Betty, la fea: la historia continúa I y II***, serie derivada de la obra original de Fernando Gaitán, en la que me desempeñé como head writer y como **guionista principal**. Asimismo, soy creadora del **formato original *Simplemente Alicia* emitido por Netflix Global**, donde fui head writer y guionista principal.',
       'Me desempeño como **coordinadora de Desarrollo de Contenidos para Gosua España** y ofrezco servicios de **consultoría y asesoramiento de guión** para productoras hispanoamericanas. He trabajado en la revisión y el desarrollo de proyectos para distintos mercados, incluyendo *Ciega a citas* en Shanghái (China), Croton TV, Sony en Hungría, Lituania y Chile, y *Socias* en Chile.',
       'También soy miembro del jurado de los **Premios Emmy Internacionales, Premios PRODU y Premios Anillos de Oro en España**, y embajadora de **Recreas**.',
-      'Mi catálogo reúne proyectos de autoría propia y creaciones desarrolladas en colaboración con autores de destacada trayectoria, como David Serrano, Fernando Castets, Julio Rojas, Paula del Fierro y Esteban del Campo.',
+      'Mi catálogo reúne proyectos de autoría propia y creaciones desarrolladas en colaboración con autores de destacada trayectoria, como David Serrano, Fernando Castets, Julio Rojas y Esteban del Campo.',
     ],
   },
 
@@ -162,12 +166,14 @@ export const es = {
     watch: 'Ver online →',
     trailer: 'Tráiler',
     teaser: 'Teaser',
+    program: 'Programa',
     play: 'Reproducir',
     watchOnYoutube: 'Ver en YouTube →',
     categories: {
       series: 'Series',
       theater: 'Teatro',
       podcast: 'Podcast',
+      radio: 'Radio',
     },
     items: projectItems as Record<ProjectSlug, ProjectText>,
   },

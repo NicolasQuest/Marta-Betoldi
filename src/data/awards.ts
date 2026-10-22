@@ -9,6 +9,7 @@ export type AwardEntry = {
 
 // Premios ganados, del más nuevo al más viejo
 export const awards: AwardEntry[] = [
+  { year: '2025', award: 'indiaCatalina', work: 'Betty, la fea: la historia continúa I', category: 'bestProduction' },
   { year: '2017', award: 'tato', work: 'Las Estrellas', category: 'dailyComedy' },
   { year: '2015', award: 'martinFierro', work: 'Esperanza mía', category: 'production' },
   { year: '2015', award: 'kidsChoice', work: 'Esperanza mía', category: 'production' },
@@ -29,8 +30,10 @@ export const nominations: AwardEntry[] = [
   { year: '2026', award: 'produ', work: 'Betty, la fea: la historia continúa', category: 'romComSeries' },
   { year: '2026', award: 'produ', work: 'Simplemente Alicia', category: 'familyRomanticDramaScript' },
   { year: '2026', award: 'produ', work: 'Simplemente Alicia', category: 'romDramaSeries' },
-  { year: '2025', award: 'indiaCatalina', work: 'Betty, la fea: la historia continúa', category: 'fictionScript' },
-  { year: '2025', award: 'indiaCatalina', work: 'Betty, la fea: la historia continúa', category: 'fictionSeries' },
+  { year: '2026', award: 'indiaCatalina', work: 'Betty, la fea: la historia continúa II', category: 'fictionScript' },
+  { year: '2026', award: 'indiaCatalina', work: 'Betty, la fea: la historia continúa II', category: 'fictionSeries' },
+  { year: '2025', award: 'indiaCatalina', work: 'Betty, la fea: la historia continúa I', category: 'fictionScript' },
+  { year: '2025', award: 'indiaCatalina', work: 'Betty, la fea: la historia continúa I', category: 'fictionSeries' },
   { year: '2017', award: 'tato', work: 'Las Estrellas', category: 'screenwriter' },
   { year: '2017', award: 'martinFierro', work: 'Las Estrellas', category: 'dailyFiction' },
   { year: '2015', award: 'tato', work: 'Esperanza mía' },

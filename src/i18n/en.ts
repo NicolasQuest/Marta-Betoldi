@@ -20,10 +20,10 @@ export const en: Translations = {
       'I am an **Argentine screenwriter, playwright and actress**. I hold a degree in Literature from the **University of Buenos Aires (UBA)** and graduated in Playwriting from the **Escuela Metropolitana de Arte Dramático (EMAD)**. I live in Madrid, and I completed my screenwriting training with leading figures such as **John Truby, Robert McKee and Linda Seger**, as well as taking part in workshops with **Juan Campanella and Aída Bortnik**.',
       'Throughout my career, I have developed and written series such as *Socias*, *Ciega a citas*, *Cuando me sonreís*, *Daños Colaterales*, *Edha*, *Esperanza mía*, *Solamente Vos*, *Las Estrellas*, *El Host II* and *Planners II*, among others. I have also ventured into podcasting with "*Escribiendo el fin del mundo*", an original creation for **Atresmedia**.',
       'My work spans productions for broadcast television, streaming platforms and production companies in different markets. The companies and platforms I have worked with include Pol-ka, Telefe, Canal 13, Televisión Pública, Flow, Netflix, Amazon Prime Video, Disney+, Fox International, Canal RCN, Dori Media and Good Mood.',
-      'I am the **creator of** ***Betty la Fea: The Story Continues***, a series based on the original work by Fernando Gaitán, on which I also served as **head writer**. I also developed the **original format of *Simplemente Alicia* for Netflix Global**, where I was head writer.',
+      'I am the **creator of** ***Betty la Fea: The Story Continues I and II***, a series based on the original work by Fernando Gaitán, on which I served as head writer and **lead screenwriter**. I am also the creator of the **original format *Simplemente Alicia*, released on Netflix Global**, where I was head writer and lead screenwriter.',
       'I work as **Content Development Coordinator for Gosua Spain** and provide **script consulting and advisory services** for Latin American production companies. I have reviewed and developed projects for different markets, including *Ciega a citas* in Shanghai (China), Croton TV, Sony in Hungary, Lithuania and Chile, and *Socias* in Chile.',
       'I am also a jury member of the **International Emmy Awards, the PRODU Awards and the Anillos de Oro Awards in Spain**, and an ambassador for **Recreas**.',
-      'My catalog brings together projects of my own authorship and works created in collaboration with renowned authors such as David Serrano, Fernando Castets, Julio Rojas, Paula del Fierro and Esteban del Campo.',
+      'My catalog brings together projects of my own authorship and works created in collaboration with renowned authors such as David Serrano, Fernando Castets, Julio Rojas and Esteban del Campo.',
     ],
   },
 
@@ -35,12 +35,14 @@ export const en: Translations = {
     watch: 'Watch online →',
     trailer: 'Trailer',
     teaser: 'Teaser',
+    program: 'Episode',
     play: 'Play',
     watchOnYoutube: 'Watch on YouTube →',
     categories: {
       series: 'Series',
       theater: 'Theater',
       podcast: 'Podcast',
+      radio: 'Radio',
     },
     items: {
       'socias': {
@@ -79,17 +81,20 @@ export const en: Translations = {
       'simplemente-alicia': {
         description: 'The series follows the life of Alicia, a woman caught in an emotional dilemma that leads her into a double love life and ends with her married to two men at once. Blending humor and drama, the story explores female bigamy, the limits of desire, the contradictions of love and the clash between social expectations and personal freedom.',
       },
-      'el-relato-de-la-esposa-del-alergologo': {
-        description: 'Stage adaptation.',
+      'el-cuento-de-la-mujer-del-alergista': {
+        description: 'A stage adaptation of the play by American playwright Charles Busch, premiered at the Multiteatro in Buenos Aires.',
       },
-      'loca-feliz-muy-loca': {
-        description: 'Stage adaptation.',
+      'locos-de-contento': {
+        description: 'A free stage adaptation of the play by Jacobo Langsner. It was staged in Buenos Aires and had a season in Mar del Plata.',
       },
       'extras': {
-        description: 'A play written by Marta, in the United States.',
+        description: 'A play written by Marta Betoldi, awarded the Premio Municipal de Teatro in the debut work (Ópera Prima) category. It premiered in Buenos Aires.',
+      },
+      'recalculando': {
+        description: 'Recalculando, hosted by Marta Betoldi, aired on Sundays throughout 2015 on AM 1110. A series of interviews and conversations with figures from the cultural, artistic and music worlds.',
       },
       'contracciones': {
-        description: 'Premiered as part of TeatroxlaIdentidad, the play interweaves the monologues of two women at two different moments in time, united by the experience of carrying a child. Through an intimate and moving interplay, it explores motherhood, memory, the hidden truth of Argentine mothers and the search for identity.',
+        description: 'Premiered as part of TeatroxlaIdentidad, the play interweaves the monologues of two women at two different moments in time, united by the experience of carrying a child. Through an intimate and moving interplay, it explores motherhood, memory, the hidden truth of Argentine mothers and the search for identity. The play toured Argentina and Spain and was staged in cities such as London, Miami, Mexico City, Paris, Lille and Madrid. It has been translated into Italian, English and French.',
       },
       'las-gratitudes': {
         description: 'Las gratitudes (2026) is a stage play based on the novel of the same name by French writer Delphine de Vigan. The story follows Michka, an elderly woman who begins to lose the ability to speak and sets out to find the people who helped her during her childhood so she can thank them. Through an intimate and moving story, the play reflects on memory, human bonds and the importance of expressing gratitude.',
@@ -142,6 +147,7 @@ export const en: Translations = {
     categories: {
       dailyComedy: 'Best Daily Comedy',
       production: 'Production award',
+      bestProduction: 'Best Production',
       seriesTelenovelas: 'Series and Telenovelas',
       excellenceFiction: 'Award of Excellence for Best Fiction',
       sitcom: 'Best Sitcom',

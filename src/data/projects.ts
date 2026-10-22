@@ -1,10 +1,10 @@
 import type { ProjectSlug } from '../i18n/es'
 
-export type ProjectCategory = 'series' | 'theater' | 'podcast'
+export type ProjectCategory = 'series' | 'theater' | 'podcast' | 'radio'
 
 export type Trailer = {
   url: string
-  kind?: 'teaser' // por defecto es tráiler
+  kind?: 'teaser' | 'program' // por defecto es tráiler; 'program' = programa completo (radio)
 }
 
 export type Project = {
@@ -19,7 +19,7 @@ export type Project = {
 }
 
 // Orden en que se muestran las categorías en Proyectos
-export const categories: ProjectCategory[] = ['series', 'theater', 'podcast']
+export const categories: ProjectCategory[] = ['series', 'theater', 'podcast', 'radio']
 
 const yt = (id: string) => `https://www.youtube.com/watch?v=${id}`
 
@@ -40,16 +40,19 @@ export const projects: Project[] = [
   { slug: 'socias', title: 'Socias', category: 'series', year: '2008', platform: 'Canal 13', poster: '/fotos/Posters/socias.jpg', link: 'https://www.eltrecetv.com.ar/socias/capitulos/', trailers: [{ url: yt('rJKy_F0IbNk') }] },
 
   // Teatro
-  { slug: 'hasta-el-final-de-la-fiesta', title: 'Hasta el Final de la Fiesta', category: 'theater', year: '2026', platform: 'Teatro Infanta Isabel', poster: '/fotos/Posters/Hasta_El_Final.png' },
-  { slug: 'las-gratitudes', title: 'Las Gratitudes', category: 'theater', year: '2026', platform: 'Teatro de la Abadía', poster: '/fotos/Posters/Gratitudes.jpeg' },
-  // TODO: faltan los pósters de estas tres
-  { slug: 'el-relato-de-la-esposa-del-alergologo', title: 'El Relato de la Esposa del Alergólogo', category: 'theater', year: '2011' },
+  { slug: 'hasta-el-final-de-la-fiesta', title: 'Hasta el Final de la Fiesta', category: 'theater', year: '2026', platform: 'Teatro Infanta Isabel - Madrid, España', poster: '/fotos/Posters/Hasta_El_Final.png' },
+  { slug: 'las-gratitudes', title: 'Las Gratitudes', category: 'theater', year: '2026', platform: 'Teatro Infanta Isabel - Madrid, España', poster: '/fotos/Posters/Gratitudes.jpeg' },
+  // TODO: faltan los pósters de El Cuento de la Mujer del Alergista, Locos de Contento y Extras
+  { slug: 'el-cuento-de-la-mujer-del-alergista', title: 'El Cuento de la Mujer del Alergista', category: 'theater', year: '2011', platform: 'Multiteatro - Buenos Aires, Argentina' },
   { slug: 'contracciones', title: 'Contracciones', category: 'theater', year: '2007', platform: 'Teatro x la Identidad', poster: '/fotos/Posters/Contracciones.png' },
-  { slug: 'loca-feliz-muy-loca', title: 'Loca Feliz, Muy Loca', category: 'theater', year: '2005' },
-  { slug: 'extras', title: 'Extras', category: 'theater', year: '2000', platform: 'Estados Unidos' },
+  { slug: 'locos-de-contento', title: 'Locos de Contento', category: 'theater', year: '2001', platform: 'Buenos Aires, Argentina' },
+  { slug: 'extras', title: 'Extras', category: 'theater', year: '2000', platform: 'Buenos Aires, Argentina' },
 
   // Podcast
   { slug: 'escribiendo-el-fin-del-mundo', title: 'Escribiendo el Fin del Mundo', category: 'podcast', year: '2023', platform: 'Sonora', poster: '/fotos/Posters/EDFMS.jpeg' },
+
+  // Radio
+  { slug: 'recalculando', title: 'Recalculando', category: 'radio', year: '2015', platform: 'La Once Diez - Radio Ciudad AM 1110', poster: '/fotos/Proyectos/recalculando.jpg', trailers: [{ url: yt('tzIXebUVuKw'), kind: 'program' }] },
 ]
 
 export const findProject = (slug: string) => projects.find((p) => p.slug === slug)

@@ -53,7 +53,7 @@ export default function ProyectoPage() {
       {/* Tráiler / teaser abajo de todo, embebido de YouTube (carga al hacer clic) */}
       {/* Cada video se chequea por separado: si uno falla, solo ese se oculta */}
       {trailers.map((tr) => {
-        const label = tr.kind === 'teaser' ? t.projects.teaser : t.projects.trailer
+        const label = tr.kind === 'teaser' ? t.projects.teaser : tr.kind === 'program' ? t.projects.program : t.projects.trailer
         return (
           <YouTubeEmbed
             key={tr.url}
