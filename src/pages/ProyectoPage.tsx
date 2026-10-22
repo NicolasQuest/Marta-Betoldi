@@ -1,4 +1,5 @@
 import PageSection from '../components/PageSection'
+import YouTubeEmbed from '../components/YouTubeEmbed'
 import { findProject } from '../data/projects'
 import { useLanguage } from '../i18n/LanguageContext'
 import '../components/ProjectsGrid.css'
@@ -26,15 +27,16 @@ export default function ProyectoPage() {
   }
 
   const { description } = t.projects.items[project.slug]
+  const trailers = project.trailers ?? []
 
   return (
     <PageSection id="proyecto" title={project.title}>
       <div className="projectDetail">
-        <img className="projectDetail-poster" src={project.poster} alt={project.title} />
+        {project.poster && <img className="projectDetail-poster" src={project.poster} alt={project.title} />}
         <div className="projectDetail-text">
           {/* Año y plataforma, en gris: "2025 · Netflix" */}
           <p className="projectDetail-genre">
-            {project.year} · {project.platform}
+            {[project.year, project.platform].filter(Boolean).join(' · ')}
           </p>
           <p className="textoBio">{description}</p>
           <div className="projectDetail-links">
@@ -47,6 +49,17 @@ export default function ProyectoPage() {
           </div>
         </div>
       </div>
+
+      {/* Tráiler / teaser abajo de todo, embebido de YouTube (carga al hacer clic) */}
+      {trailers.map((tr) => {
+        const label = tr.kind === 'teaser' ? t.projects.teaser : t.projects.trailer
+        return (
+          <section className="projectTrailer" key={tr.url}>
+            <h2 className="projectTrailer-title">{label}</h2>
+            <YouTubeEmbed url={tr.url} title={`${label} · ${project.title}`} playLabel={t.projects.play} />
+          </section>
+        )
+      })}
     </PageSection>
   )
 }

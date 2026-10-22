@@ -84,6 +84,21 @@
     object-position: center;
 }
 
+.projectCard-noPoster {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 16px;
+    text-align: center;
+    font-family: helvetica-th;
+    font-size: 1.15rem;
+    line-height: 1.3;
+    color: var(--color-text-strong);
+    background: var(--color-border);
+}
+
 .projectCard-overlay {
     position: absolute;
     inset: 0;
@@ -175,4 +190,24 @@
         --gap: 16px;
         grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
     }
+}
+
+/* Detalle sin póster: el texto ocupa todo el ancho */
+.projectDetail-text:only-child {
+    max-width: 760px;
+}
+
+/* Tráiler embebido, abajo del póster y el texto, a todo el ancho del contenido */
+.projectTrailer {
+    margin: 2vh 0 6vh;
+}
+
+.projectTrailer-title {
+    font-family: helvetica-roman;
+    font-size: calc(1rem + 3px);
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-text-strong);
+    margin-bottom: 1.2rem;
 }
