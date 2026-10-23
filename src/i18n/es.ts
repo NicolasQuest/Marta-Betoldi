@@ -34,6 +34,9 @@ const projectItems = {
   'planners': {
     description: 'Protagonizada por Celeste Cid, la trama sigue a Malena Carregal, una mujer que, tras divorciarse de su esposo y socio, reacondiciona su vida profesional montando su propia agencia de organización de eventos. La historia aborda los desafíos del emprendedurismo, el caos detrás del lujo y las celebraciones, la reconstrucción personal a los 40 años y la búsqueda de independencia emocional y laboral.',
   },
+  'betty-la-fea-2': {
+    description: 'Betty, la fea: la historia continúa (Temporada 2) profundiza el impacto del regreso de Betty a la dirección de Ecomoda y la búsqueda de su propio camino profesional y emocional. Tras los giros del final de la primera entrega, esta nueva etapa explora la redefinición definitiva de su vínculo con Armando, los retos de consolidar la relación con su hija Mila y las nuevas dinámicas operativas y personales que transforman por completo el universo de la empresa.',
+  },
   'betty-la-fea': {
     description: 'Betty, la fea: la historia continúa (2024 - Amazon Prime) es una serie colombiana de comedia y drama, secuela de Yo soy Betty, la fea, protagonizada por Ana María Orozco y Jorge Enrique Abello. Veinte años después, Betty enfrenta nuevos desafíos personales y profesionales mientras intenta reconstruir el vínculo con su hija adolescente y atraviesa una crisis en su relación con Armando. La serie retoma la historia de los personajes originales y explora los cambios en sus relaciones y en el mundo empresarial de Ecomoda.',
   },

@@ -75,6 +75,9 @@ export const en: Translations = {
       'planners': {
         description: 'Starring Celeste Cid, the plot follows Malena Carregal, a woman who, after divorcing her husband and business partner, rebuilds her professional life by starting her own event-planning agency. The story tackles the challenges of entrepreneurship, the chaos behind luxury and celebrations, starting over at 40 and the pursuit of emotional and professional independence.',
       },
+      'betty-la-fea-2': {
+        description: 'Betty la Fea: The Story Continues (Season 2) delves into the impact of Betty’s return to the helm of Ecomoda and her search for her own professional and emotional path. After the twists at the end of the first season, this new chapter explores the definitive redefinition of her bond with Armando, the challenges of strengthening her relationship with her daughter Mila, and the new operational and personal dynamics that completely transform the company’s world.',
+      },
       'betty-la-fea': {
         description: 'Betty la Fea: The Story Continues (2024 - Amazon Prime) is a Colombian comedy-drama series and the sequel to Yo soy Betty, la fea, starring Ana María Orozco and Jorge Enrique Abello. Twenty years later, Betty faces new personal and professional challenges as she tries to rebuild her bond with her teenage daughter while going through a crisis in her relationship with Armando. The series picks up the story of the original characters and explores how their relationships and the business world of Ecomoda have changed.',
       },
