@@ -65,6 +65,14 @@ export default function ProyectoPage() {
           />
         )
       })}
+
+      {/* Tráiler en audio (podcast): reproductor nativo del navegador */}
+      {project.audio && (
+        <section className="projectTrailer">
+          <h2 className="projectTrailer-title">{t.projects.trailer}</h2>
+          <audio className="projectAudio" controls preload="metadata" src={project.audio} />
+        </section>
+      )}
     </PageSection>
   )
 }

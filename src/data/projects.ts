@@ -16,6 +16,7 @@ export type Project = {
   poster?: string // sin póster, la card muestra el título
   link?: string // dónde verla (plataforma / canal)
   trailers?: Trailer[]
+  audio?: string // tráiler en audio (podcast), se muestra con un reproductor
 }
 
 // Orden en que se muestran las categorías en Proyectos
@@ -41,7 +42,7 @@ export const projects: Project[] = [
   { slug: 'socias', title: 'Socias', category: 'series', year: '2008', platform: 'Canal 13', poster: '/fotos/Posters/socias.jpg', link: 'https://www.eltrecetv.com.ar/socias/capitulos/', trailers: [{ url: yt('rJKy_F0IbNk') }] },
 
   // Teatro
-  { slug: 'hasta-el-final-de-la-fiesta', title: 'Hasta el Final de la Fiesta', category: 'theater', year: '2026', platform: 'Teatro Infanta Isabel - Madrid, España', poster: '/fotos/Posters/Hasta_El_Final.png' },
+  { slug: 'hasta-el-final-de-la-fiesta', title: 'Hasta el Final de la Fiesta', category: 'theater', year: '2026', platform: 'Teatro Infanta Isabel - Madrid, España', poster: '/fotos/Posters/Hasta_El_Final.png', trailers: [{ url: yt('ap_dsaA_YH0') }] },
   { slug: 'las-gratitudes', title: 'Las Gratitudes', category: 'theater', year: '2026', platform: 'Teatro Infanta Isabel - Madrid, España', poster: '/fotos/Posters/Gratitudes.jpeg' },
   // TODO: faltan los pósters de El Cuento de la Mujer del Alergista, Locos de Contento y Extras
   { slug: 'el-cuento-de-la-mujer-del-alergista', title: 'El Cuento de la Mujer del Alergista', category: 'theater', year: '2011', platform: 'Multiteatro - Buenos Aires, Argentina' },
@@ -50,7 +51,7 @@ export const projects: Project[] = [
   { slug: 'extras', title: 'Extras', category: 'theater', year: '2000', platform: 'Buenos Aires, Argentina' },
 
   // Podcast
-  { slug: 'escribiendo-el-fin-del-mundo', title: 'Escribiendo el Fin del Mundo', category: 'podcast', year: '2023', platform: 'Sonora', poster: '/fotos/Posters/EDFMS.jpeg' },
+  { slug: 'escribiendo-el-fin-del-mundo', title: 'Escribiendo el Fin del Mundo', category: 'podcast', year: '2023', platform: 'Sonora', poster: '/fotos/Posters/EDFMS.jpeg', audio: '/audio/escribiendo-el-fin-del-mundo.mp3' },
 
   // Radio
   { slug: 'recalculando', title: 'Recalculando', category: 'radio', year: '2015', platform: 'La Once Diez - Radio Ciudad AM 1110', poster: '/fotos/Proyectos/recalculando.jpg', trailers: [{ url: yt('tzIXebUVuKw'), kind: 'program' }] },

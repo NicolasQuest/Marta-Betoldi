@@ -211,3 +211,9 @@
     color: var(--color-text-strong);
     margin-bottom: 1.2rem;
 }
+
+/* Reproductor de audio del podcast, a todo el ancho */
+.projectAudio {
+    display: block;
+    width: 100%;
+}
