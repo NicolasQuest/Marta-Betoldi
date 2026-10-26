@@ -14,6 +14,7 @@ export type Project = {
   year: string
   platform?: string // dónde se emitió / estrenó (canal, plataforma o teatro); se muestra junto al año
   poster?: string // sin póster, la card muestra el título
+  cardPoster?: string // versión vertical para la card, si el póster es horizontal
   link?: string // dónde verla (plataforma / canal)
   trailers?: Trailer[]
   audio?: string // tráiler en audio (podcast), se muestra con un reproductor
@@ -45,7 +46,7 @@ export const projects: Project[] = [
   { slug: 'hasta-el-final-de-la-fiesta', title: 'Hasta el Final de la Fiesta', category: 'theater', year: '2026', platform: 'Teatro Infanta Isabel - Madrid, España', poster: '/fotos/Posters/Hasta_El_Final.png', trailers: [{ url: yt('ap_dsaA_YH0') }] },
   { slug: 'las-gratitudes', title: 'Las Gratitudes', category: 'theater', year: '2026', platform: 'Teatro Infanta Isabel - Madrid, España', poster: '/fotos/Posters/Gratitudes.jpeg', trailers: [{ url: yt('HNiXzQvP_Sg') }] },
   // TODO: faltan los pósters de Locos de Contento y Extras
-  { slug: 'el-cuento-de-la-mujer-del-alergista', title: 'El Cuento de la Mujer del Alergista', category: 'theater', year: '2011', platform: 'Multiteatro - Buenos Aires, Argentina', poster: '/fotos/Posters/el-cuento-de-la-mujer-del-alergista.jpg' },
+  { slug: 'el-cuento-de-la-mujer-del-alergista', title: 'El Cuento de la Mujer del Alergista', category: 'theater', year: '2011', platform: 'Multiteatro - Buenos Aires, Argentina', poster: '/fotos/Posters/el-cuento-de-la-mujer-del-alergista.jpg', cardPoster: '/fotos/Posters/el-cuento-de-la-mujer-del-alergista-card.jpg' },
   { slug: 'contracciones', title: 'Contracciones', category: 'theater', year: '2007', platform: 'Teatro x la Identidad', poster: '/fotos/Posters/Contracciones.png' },
   { slug: 'locos-de-contento', title: 'Locos de Contento', category: 'theater', year: '2001', platform: 'Buenos Aires, Argentina' },
   { slug: 'extras', title: 'Extras', category: 'theater', year: '2000', platform: 'Buenos Aires, Argentina' },
