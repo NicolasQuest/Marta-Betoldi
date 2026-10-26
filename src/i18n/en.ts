@@ -106,6 +106,7 @@ export const en: Translations = {
         description: 'It blends humor, music and emotion to celebrate life and the desire to keep enjoying it, whatever your age. Starring Mamen García, the story presents a woman who shares her experiences, desires and unfulfilled dreams, in a show that invites reflection on the passing of time, freedom and second chances.',
       },
       'escribiendo-el-fin-del-mundo': {
+        role: '**Direction, production and creation:** Marta Betoldi',
         description: 'Starring Eleonora Wexler and Favio Posca, this audio series tells an intriguing story through sound, drama and suspense. The plot delves into emotional rifts, mysteries and reflections on existence in a world on the brink of collapse, making the most of the immersive language of fiction podcasts to create an enveloping and intimate atmosphere.',
       },
     },

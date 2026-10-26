@@ -1,4 +1,5 @@
 import PageSection from '../components/PageSection'
+import RichText from '../components/RichText'
 import YouTubeEmbed from '../components/YouTubeEmbed'
 import { findProject } from '../data/projects'
 import { useLanguage } from '../i18n/LanguageContext'
@@ -26,7 +27,7 @@ export default function ProyectoPage() {
     )
   }
 
-  const { description } = t.projects.items[project.slug]
+  const { role, description } = t.projects.items[project.slug]
   const trailers = project.trailers ?? []
 
   return (
@@ -38,6 +39,11 @@ export default function ProyectoPage() {
           <p className="projectDetail-genre">
             {[project.year, project.platform].filter(Boolean).join(' · ')}
           </p>
+          {role && (
+            <p className="textoBio">
+              <RichText text={role} />
+            </p>
+          )}
           <p className="textoBio">{description}</p>
           <div className="projectDetail-links">
             {project.link && (

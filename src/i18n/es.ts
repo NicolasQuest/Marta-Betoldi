@@ -1,5 +1,6 @@
 // Texto de la página de detalle de cada proyecto
 export type ProjectText = {
+  role?: string // rol de Marta en el proyecto, se muestra arriba del texto (admite **negrita**)
   description: string
 }
 
@@ -65,6 +66,7 @@ const projectItems = {
     description: 'Combina humor, música y emoción para celebrar la vida y las ganas de seguir disfrutando sin importar la edad. Protagonizada por Mamen García, la historia presenta a una mujer que comparte sus experiencias, deseos y sueños pendientes, en un espectáculo que invita a reflexionar sobre el paso del tiempo, la libertad y las segundas oportunidades.',
   },
   'escribiendo-el-fin-del-mundo': {
+    role: '**Dirección, producción y creación:** Marta Betoldi',
     description: 'Protagonizada por Eleonora Wexler y Favio Posca, esta audioserie explora una intrigante historia narrada a través del sonido, el drama y el suspenso. La trama se sumerge en las grietas emocionales, los enigmas y las reflexiones sobre la existencia en un mundo al borde del colapso, aprovechando al máximo el lenguaje inmersivo del podcast de ficción para construir una atmósfera envolvente e íntima.',
   },
 } satisfies Record<string, ProjectText>
