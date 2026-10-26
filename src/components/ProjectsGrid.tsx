@@ -71,7 +71,7 @@ export default function ProjectsGrid() {
                 <Link className="projectCard" to={`/proyectos/${p.slug}`} aria-label={`${p.title}: ${t.projects.learnMore}`}>
                     <span className="projectCard-poster">
                       {p.poster ? (
-                        <img className="projectCard-img" src={p.cardPoster ?? p.poster} alt={p.title} loading="lazy" />
+                        <img className="projectCard-img" src={p.poster} alt={p.title} loading="lazy" />
                       ) : (
                         // Sin póster todavía: el título sobre un fondo liso, mismo tamaño de card
                         <span className="projectCard-noPoster">{p.title}</span>
