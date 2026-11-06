@@ -32,6 +32,12 @@ const projectItems = {
   'edha': {
     description: 'Protagonizada por Juana Viale, la historia sigue a una exitosa y visionaria diseñadora de moda de Buenos Aires cuya vida y carrera dan un vuelco tras conocer a Teo, un atractivo modelo e inmigrante que busca venganza. La trama combina el glamour de la alta costura con los oscuros secretos de la industria textil, la traición, el deseo y la lucha de clases.',
   },
+  'camilo-superstar': {
+    description: 'Miniserie biográfica musical española que narra el ambicioso y desafiante proceso de producción de la histórica ópera rock Jesucristo Superstar en la España de 1975, impulsado por el icónico cantante Camilo Sesto. Una ficción que retrata la libertad creativa, la juventud y el detrás de escena de un hito cultural que marcó una época.',
+  },
+  'separadas': {
+    description: 'Telenovela argentina emitida por eltrece, producida por Pol-ka. La historia sigue las vidas de siete mujeres muy diferentes que, por distintas circunstancias, se encuentran alquilando departamentos en un mismo edificio y terminan formando un fuerte vínculo de amistad y apoyo mutuo mientras enfrentan sus propios conflictos personales, laborales y amorosos.',
+  },
   'planners': {
     description: 'Protagonizada por Celeste Cid, la trama sigue a Malena Carregal, una mujer que, tras divorciarse de su esposo y socio, reacondiciona su vida profesional montando su propia agencia de organización de eventos. La historia aborda los desafíos del emprendedurismo, el caos detrás del lujo y las celebraciones, la reconstrucción personal a los 40 años y la búsqueda de independencia emocional y laboral.',
   },
@@ -68,6 +74,12 @@ const projectItems = {
   'escribiendo-el-fin-del-mundo': {
     role: '**Dirección, producción y creación:** Marta Betoldi',
     description: 'Protagonizada por Eleonora Wexler y Favio Posca, esta audioserie explora una intrigante historia narrada a través del sonido, el drama y el suspenso. La trama se sumerge en las grietas emocionales, los enigmas y las reflexiones sobre la existencia en un mundo al borde del colapso, aprovechando al máximo el lenguaje inmersivo del podcast de ficción para construir una atmósfera envolvente e íntima.',
+  },
+  'socios': {
+    description: 'Webserie protagonizada por los rugbiers Agustín Creevy y Leo Senatore, concebida como un formato de ficción para el universo digital. Proyecto en el cual Marta Betoldi se desempeñó como creadora, showrunner, guionista y directora de actores.',
+  },
+  'fravega': {
+    description: 'Secuencia de spots publicitarios concebidos para la campaña del centenario de Frávega. Una serie de cuatro entregas de ficción publicitaria escritas por Marta Betoldi como guionista, en coautoría con Susana Giménez y Ricardo Darín, bajo la dirección de Juan José Taratuto.',
   },
 } satisfies Record<string, ProjectText>
 
@@ -172,6 +184,7 @@ export const es = {
     trailer: 'Tráiler',
     teaser: 'Teaser',
     program: 'Programa',
+    spot: 'Spot',
     play: 'Reproducir',
     watchOnYoutube: 'Ver en YouTube →',
     categories: {
@@ -179,6 +192,7 @@ export const es = {
       theater: 'Teatro',
       podcast: 'Podcast',
       radio: 'Radio',
+      advertising: 'Publicidad',
     },
     items: projectItems as Record<ProjectSlug, ProjectText>,
   },

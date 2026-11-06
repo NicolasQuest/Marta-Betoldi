@@ -36,6 +36,7 @@ export const en: Translations = {
     trailer: 'Trailer',
     teaser: 'Teaser',
     program: 'Episode',
+    spot: 'Commercial',
     play: 'Play',
     watchOnYoutube: 'Watch on YouTube →',
     categories: {
@@ -43,6 +44,7 @@ export const en: Translations = {
       theater: 'Theater',
       podcast: 'Podcast',
       radio: 'Radio',
+      advertising: 'Advertising',
     },
     items: {
       'socias': {
@@ -71,6 +73,12 @@ export const en: Translations = {
       },
       'edha': {
         description: 'Starring Juana Viale, the story follows a successful and visionary Buenos Aires fashion designer whose life and career are turned upside down after she meets Teo, an attractive model and immigrant seeking revenge. The plot combines the glamour of haute couture with the dark secrets of the textile industry, betrayal, desire and class struggle.',
+      },
+      'camilo-superstar': {
+        description: 'Spanish biographical musical miniseries about the ambitious and challenging production of the landmark rock opera Jesus Christ Superstar in 1975 Spain, driven by iconic singer Camilo Sesto. A story about creative freedom, youth and the behind-the-scenes of a cultural milestone that defined an era.',
+      },
+      'separadas': {
+        description: 'Argentine telenovela aired on eltrece and produced by Pol-ka. The story follows the lives of seven very different women who, for various reasons, end up renting apartments in the same building and form a strong bond of friendship and mutual support while facing their own personal, work and love conflicts.',
       },
       'planners': {
         description: 'Starring Celeste Cid, the plot follows Malena Carregal, a woman who, after divorcing her husband and business partner, rebuilds her professional life by starting her own event-planning agency. The story tackles the challenges of entrepreneurship, the chaos behind luxury and celebrations, starting over at 40 and the pursuit of emotional and professional independence.',
@@ -108,6 +116,12 @@ export const en: Translations = {
       'escribiendo-el-fin-del-mundo': {
         role: '**Direction, production and creation:** Marta Betoldi',
         description: 'Starring Eleonora Wexler and Favio Posca, this audio series tells an intriguing story through sound, drama and suspense. The plot delves into emotional rifts, mysteries and reflections on existence in a world on the brink of collapse, making the most of the immersive language of fiction podcasts to create an enveloping and intimate atmosphere.',
+      },
+      'socios': {
+        description: 'Web series starring rugby players Agustín Creevy and Leo Senatore, conceived as a fiction format for the digital world. Marta Betoldi served as creator, showrunner, screenwriter and acting director on the project.',
+      },
+      'fravega': {
+        description: 'A sequence of commercials created for Frávega’s centennial campaign. A series of four fictional advertising installments written by Marta Betoldi as screenwriter, co-written with Susana Giménez and Ricardo Darín, directed by Juan José Taratuto.',
       },
     },
   },
